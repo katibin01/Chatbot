@@ -1,4 +1,4 @@
-# WhatsApp AI Bot - Enhanced Version
+<h1 align=center> Chatbot WhatsApp AI</h1>
 
 Advanced WhatsApp bot dengan integrasi Rasa AI yang dilengkapi fitur lengkap untuk production use.
 
@@ -32,7 +32,7 @@ Advanced WhatsApp bot dengan integrasi Rasa AI yang dilengkapi fitur lengkap unt
 1. **Clone & Install**
 ```bash
 git clone <repository-url>
-cd whatsapp-ai-bot
+cd name_app_clone
 npm run setup
 ```
 
