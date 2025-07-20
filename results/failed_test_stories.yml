@@ -1,0 +1,130 @@
+version: "3.1"
+stories:
+- story: Tes alur identifikasi pengguna (C:\Users\Dev\Project\apai\tests\test_stories.yml)
+  steps:
+  - intent: nama_lengkap
+  - action: utter_identifikasi_nim_mahasiswa
+  - intent: nim_mahasiswa
+  - action: utter_identifikasi_fakultas_mahasiswa
+  - intent: fakultas_mahasiswa
+  - action: utter_identifikasi_prodi_mahasiswa
+  - intent: prodi_mahasiswa
+  - action: utter_identifikasi_kode_PT_universitas
+  - intent: kode_PT_universitas
+  - action: utter_identifikasi_tahun_masuk
+  - intent: tahun_masuk
+  - action: utter_identifikasi_tahun_lulus
+  - intent: tahun_lulus
+  - action: utter_identifikasi_nomor_telepon  # predicted: utter_identifikasi_kode_prodi
+  - intent: no_telp
+  - action: utter_identifikasi_email_mahasiswa
+  - intent: email
+  - action: utter_identifikasi_nik_mahasiswa
+  - intent: nik_mahasiswa
+  - action: utter_identifikasi_alamat
+  - intent: alamat
+  - action: utter_identifikasi_npwp_mahasiswa
+  - intent: npwp
+  - action: utter_kuesioner_f8
+  - intent: kode_f8
+    entities:
+    - status: Bekerja
+  - slot_was_set:
+    - status: Bekerja
+  - slot_was_set:
+    - status: Bekerja
+  - action: utter_kuesioner_f502
+  - intent: kode_f502
+  - action: utter_kuesioner_f504
+  - intent: kode_f504
+  - action: utter_kuesioner_f505
+  - intent: kode_f505
+  - action: utter_kuesioner_f506
+  - intent: kode_f506
+  - action: utter_kuesioner_f507
+  - intent: kode_f507
+  - action: utter_kuesioner_f509
+  - intent: kode_f509
+  - action: utter_kuesioner_f512
+  - intent: kode_f512
+  - action: utter_kuesioner_f513
+  - intent: kode_f513
+  - action: utter_kuesioner_f514
+  - intent: kode_f514
+  - action: utter_kuesioner_f515
+  - intent: kode_f515
+  - action: utter_kuesioner_f5151
+  - intent: kode_f5151
+  - action: utter_kuesioner_f5152
+  - intent: kode_f5152
+  - action: utter_kuesioner_f5153
+  - intent: kode_f5153
+  - action: utter_kuesioner_f5154
+  - intent: kode_f5154
+  - action: utter_kuesioner_f5155
+  - intent: kode_f5155
+  - action: utter_kuesioner_f5156
+  - intent: kode_f5156
+  - action: utter_kuesioner_f516
+  - intent: kode_f516
+  - action: utter_kuesioner_f5161
+  - intent: kode_f5161
+  - action: utter_kuesioner_f517
+  - intent: kode_f517
+  - action: utter_kuesioner_f518
+  - intent: kode_f518
+  - action: utter_kuesioner_f519
+  - intent: kode_f519
+  - action: utter_kuesioner_f520
+  - intent: kode_f520
+  - action: utter_kuesioner_f521
+  - intent: kode_f521
+  - action: utter_kuesioner_f522
+  - intent: kode_f522
+  - action: action_save_job_data
+  - action: utter_send_email
+- story: Tes alur pengguna Wirausaha (C:\Users\Dev\Project\apai\tests\test_stories.yml)
+  steps:
+  - intent: npwp
+  - action: utter_kuesioner_f8
+  - intent: kode_f8
+    entities:
+    - status: Wirausaha
+  - slot_was_set:
+    - status: Wirausaha
+  - slot_was_set:
+    - status: Wirausaha
+  - action: utter_kuesioner_f503
+  - intent: kode_f503
+  - action: utter_kuesioner_f504
+  - intent: kode_f504
+  - action: utter_kuesioner_f505  # predicted: utter_kuesioner_f508
+  - intent: kode_f505
+  - action: utter_kuesioner_f508  # predicted: utter_kuesioner_f506
+  - intent: kode_f508
+  - action: utter_kuesioner_f512
+  - intent: kode_f512
+  - action: utter_kuesioner_f513
+  - intent: kode_f513
+  - action: utter_kuesioner_f514
+  - intent: kode_f514
+  - action: utter_kuesioner_f515
+  - intent: kode_f515
+  - action: utter_kuesioner_f5151
+  - intent: kode_f5151
+  - action: utter_kuesioner_f5152
+  - intent: kode_f5152
+  - action: utter_kuesioner_f5153
+  - intent: kode_f5153
+  - action: utter_kuesioner_f5154
+  - intent: kode_f5154
+  - action: utter_kuesioner_f5155
+  - intent: kode_f5155
+  - action: utter_kuesioner_f5156
+  - intent: kode_f5156
+  - action: utter_kuesioner_f517
+  - intent: kode_f517
+  - action: utter_kuesioner_f522
+  - intent: kode_f522
+  - action: action_save_business_data
+  - action: utter_send_email

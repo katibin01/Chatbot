@@ -1,0 +1,205 @@
+# The config recipe.
+# https://rasa.com/docs/rasa/model-configuration/
+recipe: default.v1
+
+# The assistant project unique identifier
+# This default value must be replaced with a unique assistant name within your deployment
+assistant_id: 20250601-164649-chatbot-tracer-studi
+
+# Configuration for Rasa NLU.
+# https://rasa.com/docs/rasa/nlu/components/
+language: id
+
+pipeline:
+  # No configuration for the NLU pipeline was provided. The following default pipeline was used to train your model.
+  # If you'd like to customize it, uncomment and adjust the pipeline.
+  # See https://rasa.com/docs/rasa/tuning-your-model for more information.
+
+  # - name: LanguageModelFeaturizer
+  #   # Name of the language model to use
+  #   model_name: "bert"
+  #   # Pre-Trained weights to be loaded
+  #   model_weights: "rasa/LaBSE"
+  #   # An optional path to a directory from which
+  #   # to load pre-trained model weights.
+  #   # If the requested model is not found in the
+  #   # directory, it will be downloaded and
+  #   # cached in this directory for future use.
+  #   # The default value of `cache_dir` can be
+  #   # set using the environment variable
+  #   # `TRANSFORMERS_CACHE`, as per the
+  #   # Transformers library.
+  #   cache_dir: null
+  # - name: "SpacyEntityExtractor"
+  #   # dimensions to extract
+  #   dimensions: ["PERSON", "LOC", "ORG", "PRODUCT"]
+  # - name: "SpacyNLP"
+  # # language model to load
+  #   model: "en_core_web_md"
+  # # when retrieving word vectors, this will decide if the casing
+  # # of the word is relevant. E.g. `hello` and `Hello` will
+  # # retrieve the same vector, if set to `False`. For some
+  # # applications and models it makes sense to differentiate
+  # # between these two words, therefore setting this to `True`.
+  #   case_sensitive: False
+  # - name: "CRFEntityExtractor"
+  #   # BILOU_flag determines whether to use BILOU tagging or not.
+  #   "BILOU_flag": True
+  #   # features to extract in the sliding window
+  #   "features": [
+  #     ["low", "title", "upper"],
+  #     [
+  #       "bias",
+  #       "low",
+  #       "prefix5",
+  #       "prefix2",
+  #       "suffix5",
+  #       "suffix3",
+  #       "suffix2",
+  #       "upper",
+  #       "title",
+  #       "digit",
+  #       "pattern",
+  #       "text_dense_features"
+  #     ],
+  #     ["low", "title", "upper"],
+  #   ]
+  #   # The maximum number of iterations for optimization algorithms.
+  #   "max_iterations": 50
+  #   # weight of the L1 regularization
+  #   "L1_c": 0.1
+  #   # weight of the L2 regularization
+  #   "L2_c": 0.1
+  #   # Name of dense featurizers to use.
+  #   # If list is empty all available dense features are used.
+  #   "featurizers": []
+  #   # Indicated whether a list of extracted entities should be split into individual entities for a given entity type
+  #   "split_entities_by_comma":
+  #       address: False
+  #       email: True
+  # - name: "SklearnIntentClassifier"
+  #   # Specifies the list of regularization values to
+  #   # cross-validate over for C-SVM.
+  #   # This is used with the ``kernel`` hyperparameter in GridSearchCV.
+  #   C: [1, 2, 5, 10, 20, 100]
+  #   # Specifies the kernel to use with C-SVM.
+  #   # This is used with the ``C`` hyperparameter in GridSearchCV.
+  #   kernels: ["linear"]
+  #   # Gamma parameter of the C-SVM.
+  #   "gamma": [0.1]
+  #   # We try to find a good number of cross folds to use during
+  #   # intent training, this specifies the max number of folds.
+  #   "max_cross_validation_folds": 5
+  #   # Scoring function used for evaluating the hyper parameters.
+  #   # This can be a name or a function.
+  #   "scoring_function": "f1_weighted"
+  # - name: "KeywordIntentClassifier"
+  #   case_sensitive: True
+
+  # - name: FallbackClassifier
+  #   # Analyzer to use, either 'word', 'char', or 'char_wb'
+  #   "analyzer": "word"
+  #   # Set the lower and upper boundaries for the n-grams
+  #   "min_ngram": 1
+  #   "max_ngram": 1
+  #   # Set the out-of-vocabulary token
+  #   "OOV_token": "_oov_"
+  #   # Whether to use a shared vocab
+  #   "use_shared_vocab": False
+  #   additional_vocabulary_size:
+  #   text: 1000
+  #   response: 1000
+  #   action_text: 1000
+
+  # ==== tambahan baru dari url diatas ====
+  # - name: ConveRTTokenizer
+  # - name: ConveRTFeaturizer
+  #   alias: "convert"
+  # - name: RegexFeaturizer
+  #   alias: "regex"
+  # - name: LexicalSyntacticFeaturizer
+  #   alias: "lexical-syntactic"
+  # - name: CountVectorsFeaturizer
+  #   alias: "cvf-word"
+  # - name: CountVectorsFeaturizer
+  #   alias: "cvf-char"
+  #   analyzer: "char_wb"
+  #   min_ngram: 1
+  #   max_ngram: 4
+  # - name: DIETClassifier
+  #   epochs: 100
+  # - name: EntitySynonymMapper
+  # - name: ResponseSelector
+  #   featurizers: ["convert", "cvf-word"]
+  #   epochs: 100
+  
+  - name: WhitespaceTokenizer
+    intent_tokenization_flag: False
+    intent_split_symbol: "_"
+  - name: CountVectorsFeaturizer
+  - name: CountVectorsFeaturizer
+    analyzer: char_wb
+    min_ngram: 1
+    max_ngram: 4
+  # - name: RegexFeaturizer
+  #   case_sensitive: True
+  #   use_word_boundaries: True
+  - name: LexicalSyntacticFeaturizer
+    use_lemma: True
+    use_pos: True
+    use_dep: True
+  # - name: RegexEntityExtractor
+  #   case_sensitive: False
+  #   use_lookup_tables: True
+  #   use_regexes: True
+  #   use_word_boundaries: True
+  - name: EntitySynonymMapper
+  - name: DIETClassifier
+    epochs: 100
+    entity_recognition: True
+    intent_classification: True
+    overlap_strategy: deduplicate
+  - name: ResponseSelector
+    epochs: 100
+  - name: FallbackClassifier
+    threshold: 0.7
+    ambiguity_threshold: 0.1
+    constrain_similarities: True
+
+# Configuration for Rasa Core.
+# https://rasa.com/docs/rasa/core/policies/
+policies:
+  # No configuration for policies was provided. The following default policies were used to train your model.
+  # If you'd like to customize them, uncomment and adjust the policies.
+  # See https://rasa.com/docs/rasa/policies for more information.
+  - name: MemoizationPolicy
+    priority: 5
+    max_history: 5
+  - name: RulePolicy
+    priority: 6
+    core_fallback_threshold: 0.3
+    core_fallback_action_name: action_default_fallback
+    enable_fallback_prediction: False
+    restrict_rules: true
+    check_for_contradictions: true
+  - name: AugmentedMemoizationPolicy # jika ada kondisi di mana beberapa slot tidak selalu terisi.
+    priority: 4
+    max_history: 5
+  - name: UnexpecTEDIntentPolicy
+    priority: 3
+    max_history: 5
+    epochs: 100
+    tolerance: 0.4
+  # - name: TwoStageFallbackPolicy
+  #   core_threshold: 0.3
+  #   nlu_threshold: 0.3
+  #   fallback_core_action_name: action_two_stage_fallback
+  #   fallback_nlu_action_name: action_two_stage_fallback
+  #   deny_suggestion_intent_name: out_of_scope
+  - name: TEDPolicy
+    priority: 2
+    max_history: 5
+    epochs: 200
+    batch_size: 50
+    max_training_samples: 300
+    constrain_similarities: True

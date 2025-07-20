@@ -1,0 +1,151 @@
+version: '3.1'
+
+rules:
+  - rule: Sapa pengguna
+    steps:
+      - intent: greet
+      - action: utter_greet
+
+  - rule: aksi masukan
+    steps:
+      - intent: saran_masukan
+      - action: utter_saran_masukan
+
+  - rule: Status pengisian tracer
+    steps:
+      - intent: status_pengisian_tracer
+      - action: utter_status_pengisian_tracer
+
+  - rule: tujuan tracer
+    steps:
+      - intent: tanya_tujuan_tracer
+      - action: utter_tanya_tujuan_tracer
+
+  - rule: kontak bantuan
+    steps:
+      - intent: info_kontak
+      - action: utter_info_kontak
+
+  - rule: bantuan
+    steps:
+      - intent: bantuan
+      - action: utter_bantuan
+
+  - rule: mood_unhappy
+    steps:
+      - intent: mood_unhappy
+      - action: utter_mood_unhappy
+
+  - rule: mood_great
+    steps:
+      - intent: mood_great
+      - action: utter_mood_great
+
+  - rule: Handle working alumni flow
+    steps:
+      - intent: bot_challenge
+      - action: utter_bot_challenge
+
+  - rule: goodbye
+    steps:
+      - intent: goodbye
+      - action: utter_kuesioner_f510
+
+  - rule: utter_did_that_help
+    steps:
+      - intent: ask_help
+      - action: utter_did_that_help
+
+  - rule: utter_iamabot
+    steps:
+      - intent: ask_iamabot
+      - action: utter_iamabot
+
+  - rule: utter_cheer_up
+    steps:
+      - intent: ask_cheer_up
+      - action: utter_cheer_up
+
+  - rule: Handle other status flow
+    steps:
+      - intent: ask_happy
+      - action: utter_happy
+
+  - rule: Alur Lengkap dari Sapa hingga Identifikasi
+    steps:
+      - intent: greet
+      - action: utter_greet
+
+  - rule: alur2
+    steps:
+      - intent: confirm_help
+      - action: utter_confirm_greet
+
+  # - rule: alur 3
+  #   steps:
+  #     - intent: nama_lengkap
+  #     - action: utter_identifikasi_nim_mahasiswa
+
+  # - rule: alur 4
+  #   steps:
+  #     - intent: nim_mahasiswa
+  #     - action: utter_identifikasi_fakultas_mahasiswa
+
+  # - rule: alu 5
+  #   steps:
+  #     - intent: fakultas_mahasiswa
+  #     - action: utter_identifikasi_prodi_mahasiswa
+
+  # - rule: alur 6
+  #   steps:
+  #     - intent: prodi_mahasiswa
+  #     - action: utter_identifikasi_kode_PT_universitas
+
+  # - rule: alur 7
+  #   steps:
+  #     - intent: kode_PT_universitas
+  #     - action: utter_identifikasi_tahun_masuk
+
+  # - rule: alur 8
+  #   steps:
+  #     - intent: tahun_masuk
+  #     - action: utter_identifikasi_tahun_lulus
+
+  # - rule: alur 9
+  #   steps:
+  #     - intent: tahun_lulus
+  #     - action: utter_identifikasi_kode_prodi
+
+  # - rule: alur 10
+  #   steps:
+  #     - intent: kode_prodi
+  #     - action: utter_identifikasi_nomor_telepon
+
+  # - rule: alur 11
+  #   steps:
+  #     - intent: no_telp
+  #     - action: utter_identifikasi_email_mahasiswa
+
+  # - rule: alur 12
+  #   steps:
+  #     - intent: email
+  #     - action: utter_identifikasi_nik_mahasiswa
+
+  # - rule: alur 13
+  #   steps:
+  #     - intent: nik_mahasiswa
+  #     - action: utter_identifikasi_alamat
+
+  # - rule: alur 14
+  #   steps:
+  #     - intent: alamat
+  #     - action: utter_identifikasi_npwp_mahasiswa
+
+  # - rule: alur 15
+  #   steps:
+  #     - intent: npwp
+  #     - action: utter_kuesioner_f8
+
+  # - rule: alur 7
+  #   steps:
+  #     - intent: kode_f8

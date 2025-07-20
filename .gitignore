@@ -1,0 +1,32 @@
+*.py[cod]
+*.pyd
+*.dll
+*.log
+*.tmp
+*.zip
+# /node_modules
+node_modules/
+/models
+.node-persist/storage
+.story_graph.dot
+.storage
+/.results
+.reports
+.env
+.env.backup
+.env.production
+# /.venv
+.venv/
+# .venv/include*
+# .venv/Lib*
+# .venv/Scripts*
+# .venv/share*
+# .venv/pyvenv.cfg*
+# .pytest_cache*
+/_IGNORE_CHATBOT_AI
+/_IGNORE_TRACER_STUDY_BOT
+/_IGNORE_session
+/lib
+docs.txt
+.rasa/cache*
+

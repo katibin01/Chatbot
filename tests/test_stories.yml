@@ -1,0 +1,355 @@
+#### This file contains tests to evaluate that your bot behaves as expected.
+#### If you want to learn more, please see the docs: https://rasa.com/docs/rasa/testing-your-assistant
+
+stories:
+  - story: Melanjutkan setelah menyapa
+    steps:
+      - intent: greet
+      - action: utter_greet
+      - intent: affirm
+      - action: utter_confirm_greet
+
+  - story: Sapa pengguna
+    steps:
+      - intent: greet
+      - action: utter_greet
+
+  - story: aksi masukan
+    steps:
+      - intent: saran_masukan
+      - action: utter_saran_masukan
+
+  - story: Status pengisian tracer
+    steps:
+      - intent: status_pengisian_tracer
+      - action: utter_status_pengisian_tracer
+
+  - story: tujuan tracer
+    steps:
+      - intent: tanya_tujuan_tracer
+      - action: utter_tanya_tujuan_tracer
+
+  - story: kontak bantuan
+    steps:
+      - intent: info_kontak
+      - action: utter_info_kontak
+
+  - story: bantuan
+    steps:
+      - intent: bantuan
+      - action: utter_bantuan
+
+  - story: mood_unhappy
+    steps:
+      - intent: mood_unhappy
+      - action: utter_mood_unhappy
+
+  - story: mood_great
+    steps:
+      - intent: mood_great
+      - action: utter_mood_great
+
+  - story: Handle working alumni flow
+    steps:
+      - intent: bot_challenge
+      - action: utter_bot_challenge
+
+  - story: goodbye
+    steps:
+      - intent: goodbye
+      - action: utter_kuesioner_f510
+
+  - story: utter_did_that_help
+    steps:
+      - intent: ask_help
+      - action: utter_did_that_help
+
+  - story: utter_iamabot
+    steps:
+      - intent: ask_iamabot
+      - action: utter_iamabot
+
+  - story: Test cheer up
+    steps:
+      - intent: ask_cheer_up
+      - action: utter_cheer_up
+
+  - story: Test happy response
+    steps:
+      - intent: ask_happy
+      - action: utter_happy
+
+  - story: alur2
+    steps:
+      - intent: confirm_help
+      - action: utter_confirm_greet
+
+  - story: Ketika Menanyakan Informasi Tentang Tracer Study - Identifikasi Pengguna
+    steps:
+      - intent: info_formulir_tracer
+      - action: utter_info_formulir_tracer
+
+  - story: Confirmasi untuk melanjutkan pengisian formulir
+    steps:
+      - intent: confirm_greet
+      - action: utter_confirm_greet
+  # === IDENTIFIKASI PENGGUNA ===
+  - story: Tes alur identifikasi pengguna
+    steps:
+      - intent: nama_lengkap
+      - action: utter_identifikasi_nim_mahasiswa
+      - intent: nim_mahasiswa
+      - action: utter_identifikasi_fakultas_mahasiswa
+      - intent: fakultas_mahasiswa
+      - action: utter_identifikasi_prodi_mahasiswa
+      - intent: prodi_mahasiswa
+      - action: utter_identifikasi_kode_PT_universitas
+      - intent: kode_PT_universitas
+      - action: utter_identifikasi_tahun_masuk
+      - intent: tahun_masuk
+      - action: utter_identifikasi_tahun_lulus
+      - intent: tahun_lulus
+      - action: utter_identifikasi_nomor_telepon
+      - intent: no_telp
+      - action: utter_identifikasi_email_mahasiswa
+      - intent: email
+      - action: utter_identifikasi_nik_mahasiswa
+      - intent: nik_mahasiswa
+      - action: utter_identifikasi_alamat
+      - intent: alamat
+      - action: utter_identifikasi_npwp_mahasiswa
+      - intent: npwp
+      - action: utter_kuesioner_f8
+      - intent: kode_f8
+        entities:
+          - status: 'Bekerja'
+      - slot_was_set:
+          - status: 'Bekerja'
+      - action: utter_kuesioner_f502
+      - intent: kode_f502
+      - action: utter_kuesioner_f504
+      - intent: kode_f504
+      - action: utter_kuesioner_f505
+      - intent: kode_f505
+      - action: utter_kuesioner_f506
+      - intent: kode_f506
+      - action: utter_kuesioner_f507
+      - intent: kode_f507
+      - action: utter_kuesioner_f509
+      - intent: kode_f509
+      - action: utter_kuesioner_f512
+      - intent: kode_f512
+      - action: utter_kuesioner_f513
+      - intent: kode_f513
+      - action: utter_kuesioner_f514
+      - intent: kode_f514
+      - action: utter_kuesioner_f515
+      - intent: kode_f515
+      - action: utter_kuesioner_f5151
+      - intent: kode_f5151
+      - action: utter_kuesioner_f5152
+      - intent: kode_f5152
+      - action: utter_kuesioner_f5153
+      - intent: kode_f5153
+      - action: utter_kuesioner_f5154
+      - intent: kode_f5154
+      - action: utter_kuesioner_f5155
+      - intent: kode_f5155
+      - action: utter_kuesioner_f5156
+      - intent: kode_f5156
+      - action: utter_kuesioner_f516
+      - intent: kode_f516
+      - action: utter_kuesioner_f5161
+      - intent: kode_f5161
+      - action: utter_kuesioner_f517
+      - intent: kode_f517
+      - action: utter_kuesioner_f518
+      - intent: kode_f518
+      - action: utter_kuesioner_f519
+      - intent: kode_f519
+      - action: utter_kuesioner_f520
+      - intent: kode_f520
+      - action: utter_kuesioner_f521
+      - intent: kode_f521
+      - action: utter_kuesioner_f522
+      - intent: kode_f522
+      - action: action_save_job_data
+      - action: utter_send_email
+
+  - story: Tes alur pengguna bekerja
+    steps:
+      - intent: npwp
+      - action: utter_kuesioner_f8
+      - intent: kode_f8
+        entities:
+          - status: 'Bekerja'
+      - slot_was_set:
+          - status: 'Bekerja'
+      - action: utter_kuesioner_f502
+      - intent: kode_f502
+      - action: utter_kuesioner_f504
+      - intent: kode_f504
+      - action: utter_kuesioner_f505
+      - intent: kode_f505
+      - action: utter_kuesioner_f506
+      - intent: kode_f506
+      - action: utter_kuesioner_f507
+      - intent: kode_f507
+      - action: utter_kuesioner_f509
+      - intent: kode_f509
+      - action: utter_kuesioner_f512
+      - intent: kode_f512
+      - action: utter_kuesioner_f513
+      - intent: kode_f513
+      - action: utter_kuesioner_f514
+      - intent: kode_f514
+      - action: utter_kuesioner_f515
+      - intent: kode_f515
+      - action: utter_kuesioner_f5151
+      - intent: kode_f5151
+      - action: utter_kuesioner_f5152
+      - intent: kode_f5152
+      - action: utter_kuesioner_f5153
+      - intent: kode_f5153
+      - action: utter_kuesioner_f5154
+      - intent: kode_f5154
+      - action: utter_kuesioner_f5155
+      - intent: kode_f5155
+      - action: utter_kuesioner_f5156
+      - intent: kode_f5156
+      - action: utter_kuesioner_f516
+      - intent: kode_f516
+      - action: utter_kuesioner_f5161
+      - intent: kode_f5161
+      - action: utter_kuesioner_f517
+      - intent: kode_f517
+      - action: utter_kuesioner_f518
+      - intent: kode_f518
+      - action: utter_kuesioner_f519
+      - intent: kode_f519
+      - action: utter_kuesioner_f520
+      - intent: kode_f520
+      - action: utter_kuesioner_f521
+      - intent: kode_f521
+      - action: utter_kuesioner_f522
+      - intent: kode_f522
+      - action: action_save_job_data
+      - action: utter_send_email
+
+  - story: Tes alur pengguna Melanjutkan pendidikan"
+    steps:
+      - intent: npwp
+      - action: utter_kuesioner_f8
+      - intent: kode_f8
+        entities:
+          - status: 'Melanjutkan Pendidikan'
+      - slot_was_set:
+          - status: 'Melanjutkan Pendidikan'
+      - action: utter_kuesioner_f510
+      - intent: kode_f510
+      - action: utter_kuesioner_f5101
+      - intent: kode_f5101
+      - action: utter_kuesioner_f5102
+      - intent: kode_f5102
+      - action: utter_kuesioner_f5103
+      - intent: kode_f5103
+      - action: utter_kuesioner_f511
+      - intent: kode_f511
+      - action: action_save_education_data
+      - action: utter_send_email
+
+  - story: Tes alur pengguna Wirausaha
+    steps:
+      - intent: npwp
+      - action: utter_kuesioner_f8
+      - intent: kode_f8
+        entities:
+          - status: 'Wirausaha'
+      - slot_was_set:
+          - status: 'Wirausaha'
+      - action: utter_kuesioner_f503
+      - intent: kode_f503
+      - action: utter_kuesioner_f504
+      - intent: kode_f504
+      - action: utter_kuesioner_f505
+      - intent: kode_f505
+      - action: utter_kuesioner_f508
+      - intent: kode_f508
+      - action: utter_kuesioner_f512
+      - intent: kode_f512
+      - action: utter_kuesioner_f513
+      - intent: kode_f513
+      - action: utter_kuesioner_f514
+      - intent: kode_f514
+      - action: utter_kuesioner_f515
+      - intent: kode_f515
+      - action: utter_kuesioner_f5151
+      - intent: kode_f5151
+      - action: utter_kuesioner_f5152
+      - intent: kode_f5152
+      - action: utter_kuesioner_f5153
+      - intent: kode_f5153
+      - action: utter_kuesioner_f5154
+      - intent: kode_f5154
+      - action: utter_kuesioner_f5155
+      - intent: kode_f5155
+      - action: utter_kuesioner_f5156
+      - intent: kode_f5156
+      - action: utter_kuesioner_f517
+      - intent: kode_f517
+      - action: utter_kuesioner_f522
+      - intent: kode_f522
+      - action: action_save_business_data
+      - action: utter_send_email
+
+  - story: Tes alur pengguna Melanjutkan pendidikan
+    steps:
+      - intent: npwp
+      - action: utter_kuesioner_f8
+      - intent: kode_f8
+        entities:
+          - status: 'Belum Bekerja'
+      - slot_was_set:
+          - status: 'Belum Bekerja'
+      - action: utter_kuesioner_f513
+      - intent: kode_f513
+      - action: utter_kuesioner_f514
+      - intent: kode_f514
+      - action: action_save_job_data
+      - action: utter_send_email
+
+  - story: Tes alur pengguna Tidak bekerja tapi sedang mencari pekerjaan
+    steps:
+      - intent: npwp
+      - action: utter_kuesioner_f8
+      - intent: kode_f8
+        entities:
+          - status: 'Tidak bekerja tapi sedang mencari pekerjaan'
+      - slot_was_set:
+          - status: 'Tidak bekerja tapi sedang mencari pekerjaan'
+      - action: utter_kuesioner_f513
+      - intent: kode_f513
+      - action: utter_kuesioner_f514
+      - intent: kode_f514
+      - action: action_save_unemployment_data
+      - action: utter_send_email
+
+  - story: Tes alur pengguna Lainnya
+    steps:
+      - intent: npwp
+      - action: utter_kuesioner_f8
+      - intent: kode_f8
+        entities:
+          - status: 'Lainnya'
+      - slot_was_set:
+          - status: 'Lainnya'
+      - action: utter_kuesioner_f513
+      - intent: kode_f513
+      - action: action_complete_survey
+      - action: utter_send_email
+
+  - story: Tes selesai survey
+    steps:
+      - action: utter_send_email
+      - action: action_complete_survey
+      - action: utter_goodbye

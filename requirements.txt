@@ -1,0 +1,28 @@
+rasa run
+rasa run --enable-api --cors "*"
+# rasa-sdk==3.6.0
+# requests==2.31.0
+reportlab==4.0.4
+# python-dotenv==1.0.0
+# celery==5.3.1
+redis==4.6.0
+APScheduler==3.10.4
+rasa==3.6.21
+
+# Database
+psycopg2-binary==2.9.9
+SQLAlchemy<2.0
+# alembic==1.13.1
+
+.venv\Scripts\Activate
+
+pip install SQLAlchemy
+
+# Env configuration
+python-dotenv==1.0.1
+
+# Web server (opsional, untuk deployment)
+# gunicorn==21.2.0
+
+# Utilities (opsional)
+requests==2.31.0

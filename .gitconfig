@@ -1,0 +1,18 @@
+[alias]
+  partial-push = "!sh -c '
+    REMOTE=$1; BRANCH=$2; BATCH_SIZE=100;
+    if git show-ref --verify --quiet refs/remotes/$REMOTE/$BRANCH; then
+      range=$REMOTE/$BRANCH..HEAD;
+    else
+      range=HEAD;
+    fi;
+    n=$(git log --first-parent --format=format:x $range | wc -l);
+    echo \"Total commits: $n, pushing in batches of $BATCH_SIZE…\";
+    for i in $(seq $n -$BATCH_SIZE 1); do
+      h=$(git log --first-parent --reverse --format=format:%H --skip $i -n1);
+      echo \"Pushing commit $h…\";
+      git push $REMOTE ${h}:refs/heads/$BRANCH --force;
+    done;
+    git push $REMOTE HEAD:refs/heads/$BRANCH --force
+  '"
+

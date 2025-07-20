@@ -1,0 +1,733 @@
+version: '3.1'
+intents:
+- affirm
+- alamat
+- ask_cheer_up
+- ask_happy
+- ask_help
+- ask_iamabot
+- bantuan
+- bot_challenge
+- confirm_greet
+- confirm_help
+- email
+- fakultas_mahasiswa
+- goodbye
+- greet
+- info_formulir_tracer
+- info_kontak
+- kode_PT_universitas
+- kode_f502
+- kode_f503
+- kode_f504
+- kode_f505
+- kode_f506
+- kode_f507
+- kode_f508
+- kode_f509
+- kode_f510
+- kode_f5101
+- kode_f5102
+- kode_f5103
+- kode_f511
+- kode_f512
+- kode_f513
+- kode_f514
+- kode_f515
+- kode_f5151
+- kode_f5152
+- kode_f5153
+- kode_f5154
+- kode_f5155
+- kode_f5156
+- kode_f516
+- kode_f5161
+- kode_f517
+- kode_f518
+- kode_f519
+- kode_f520
+- kode_f521
+- kode_f522
+- kode_f8
+- kode_prodi
+- mood_great
+- mood_unhappy
+- nama_lengkap
+- nik_mahasiswa
+- nim_mahasiswa
+- no_telp
+- npwp
+- prodi_mahasiswa
+- saran_masukan
+- status_pengisian_tracer
+- tahun_lulus
+- tahun_masuk
+- tanya_tujuan_tracer
+entities:
+- nama_lengkap
+- nim_mahasiswa
+- kode_prodi
+- fakultas_mahasiswa
+- kode_PT_universitas
+- prodi_mahasiswa
+- tahun_masuk
+- tahun_lulus
+- email
+- no_telp
+- nik_mahasiswa
+- alamat
+- npwp
+- status
+- kode_f502
+- kode_f503
+- kode_f504
+- kode_f505
+- kode_f506
+- kode_f507
+- kode_f508
+- kode_f509
+- kode_f510
+- kode_f5101
+- kode_f5102
+- kode_f5103
+- kode_f511
+- kode_f512
+- kode_f513
+- kode_f514
+- kode_f515
+- kode_f5151
+- kode_f5152
+- kode_f5153
+- kode_f5154
+- kode_f5155
+- kode_f5156
+- kode_f516
+- kode_f5161
+- kode_f517
+- kode_f518
+- kode_f519
+- kode_f520
+- kode_f521
+- kode_f522
+slots:
+  nama_lengkap:
+    type: text
+    mappings:
+    - type: from_entity
+      entity: nama_lengkap
+  nim_mahasiswa:
+    type: text
+    mappings:
+    - type: from_entity
+      entity: nim_mahasiswa
+  fakultas_mahasiswa:
+    type: text
+    mappings:
+    - type: from_entity
+      entity: fakultas_mahasiswa
+  kode_PT_universitas:
+    type: text
+    mappings:
+    - type: from_entity
+      entity: kode_PT_universitas
+  prodi_mahasiswa:
+    type: text
+    mappings:
+    - type: from_entity
+      entity: prodi_mahasiswa
+  tahun_masuk:
+    type: text
+    mappings:
+    - type: from_entity
+      entity: tahun_masuk
+  tahun_lulus:
+    type: text
+    mappings:
+    - type: from_entity
+      entity: tahun_lulus
+  kode_prodi:
+    type: text
+    mappings:
+    - type: from_entity
+      entity: kode_prodi
+  email:
+    type: text
+    mappings:
+    - type: from_entity
+      entity: email
+  no_telp:
+    type: text
+    mappings:
+    - type: from_entity
+      entity: no_telp
+  npwp:
+    type: text
+    mappings:
+    - type: from_entity
+      entity: npwp
+  nik_mahasiswa:
+    type: text
+    mappings:
+    - type: from_entity
+      entity: nik_mahasiswa
+  alamat:
+    type: text
+    mappings:
+    - type: from_entity
+      entity: alamat
+  status:
+    type: categorical
+    values:
+    - Bekerja
+    - Melanjutkan Pendidikan
+    - Wirausaha
+    - Belum Bekerja
+    - Tidak bekerja tapi sedang mencari pekerjaan
+    - Lainnya
+    influence_conversation: true
+    mappings:
+    - type: from_entity
+      entity: status
+    - type: from_text
+      intent: kode_f8
+  # kode_f8:
+  #   type: text
+  #   mappings:
+  #   - type: from_entity
+  #     entity: kode_f8
+  kode_f502:
+    type: text
+    mappings:
+    - type: from_entity
+      entity: kode_f502
+  kode_f503:
+    type: text
+    mappings:
+    - type: from_entity
+      entity: kode_f503
+  kode_f504:
+    type: text
+    mappings:
+    - type: from_entity
+      entity: kode_f504
+  kode_f505:
+    type: text
+    mappings:
+    - type: from_entity
+      entity: kode_f505
+  kode_f506:
+    type: text
+    mappings:
+    - type: from_entity
+      entity: kode_f506
+  kode_f507:
+    type: text
+    mappings:
+    - type: from_entity
+      entity: kode_f507
+  kode_f508:
+    type: text
+    mappings:
+    - type: from_entity
+      entity: kode_f508
+  kode_f509:
+    type: text
+    mappings:
+    - type: from_entity
+      entity: kode_f509
+  kode_f510:
+    type: text
+    mappings:
+    - type: from_entity
+      entity: kode_f510
+  kode_f5101:
+    type: text
+    mappings:
+    - type: from_entity
+      entity: kode_f5101
+  kode_f5102:
+    type: text
+    mappings:
+    - type: from_entity
+      entity: kode_f5102
+  kode_f5103:
+    type: text
+    mappings:
+    - type: from_entity
+      entity: kode_f5103
+  kode_f511:
+    type: text
+    mappings:
+    - type: from_entity
+      entity: kode_f511
+  kode_f512:
+    type: text
+    mappings:
+    - type: from_entity
+      entity: kode_f512
+  kode_f513:
+    type: text
+    mappings:
+    - type: from_entity
+      entity: kode_f513
+  kode_f514:
+    type: text
+    mappings:
+    - type: from_entity
+      entity: kode_f514
+  kode_f515:
+    type: text
+    mappings:
+    - type: from_entity
+      entity: kode_f515
+  kode_f5151:
+    type: text
+    mappings:
+    - type: from_entity
+      entity: kode_f5151
+  kode_f5152:
+    type: text
+    mappings:
+    - type: from_entity
+      entity: kode_f5152
+  kode_f5153:
+    type: text
+    mappings:
+    - type: from_entity
+      entity: kode_f5153
+  kode_f5154:
+    type: text
+    mappings:
+    - type: from_entity
+      entity: kode_f5154
+  kode_f5155:
+    type: text
+    mappings:
+    - type: from_entity
+      entity: kode_f5155
+  kode_f5156:
+    type: text
+    mappings:
+    - type: from_entity
+      entity: kode_f5156
+  kode_f516:
+    type: text
+    mappings:
+    - type: from_entity
+      entity: kode_f516
+  kode_f5161:
+    type: text
+    mappings:
+    - type: from_entity
+      entity: kode_f5161
+  kode_f517:
+    type: text
+    mappings:
+    - type: from_entity
+      entity: kode_f517
+  kode_f518:
+    type: text
+    mappings:
+    - type: from_entity
+      entity: kode_f518
+  kode_f519:
+    type: text
+    mappings:
+    - type: from_entity
+      entity: kode_f519
+  kode_f520:
+    type: text
+    mappings:
+    - type: from_entity
+      entity: kode_f520
+  kode_f521:
+    type: text
+    mappings:
+    - type: from_entity
+      entity: kode_f521
+  kode_f522:
+    type: text
+    mappings:
+    - type: from_entity
+      entity: kode_f522
+responses:
+  utter_greet:
+  - text: |
+      Hai, 👋! Selamat datang di Asisten Virtual kami. 
+      Senang sekali bertemu dengan Anda. Apa yang ingin anda ketahui tentang kami?
+  - text: |
+      Hai, 👋! Perkenalkan saya Chatbot Asisten Virtual yang diprogram untuk membantu anda. 
+      Apa yang ingin anda ketahui?
+  - text: |
+      Halo! Saya asisten virtual yang siap membantu Anda.
+      Apa yang bisa saya lakukan untuk Anda?
+      Saya dapat membantu Anda dengan informasi, jawaban pertanyaan, atau bahkan sebagai teman mengobrol
+  utter_cheer_up:
+  - text: 'Mungkin gambar ini bisa menyemangati kamu:'
+    image: https://i.imgur.com/nGF1K8f.jpg
+  utter_did_that_help:
+  - text: Apakah itu membantu kamu?
+  utter_happy:
+  - text: Senang mendengarnya! Semoga harimu menyenangkan🥰
+  utter_goodbye:
+  - text: Sampai jumpa! Terima kasih telah menggunakan layanan kami.
+  - text: Terima kasih! Telah menghubungi kami.
+  - text: Terima kasih. Semoga harimu menyenangkan!
+  utter_iamabot:
+  - text: |
+      Saya adalah chatbot asisten yang dirancang untuk membantu Anda dengan tracer study.
+      apakah ada yang bisa saya bantu?
+  - text: |
+      Saya adalah chatbot asisten yang siap membantu Anda dengan tracer study.
+      apakah ada yang bisa saya bantu?
+  - text: |
+      Saya adalah chatbot asisten tracer study yang siap membantu Anda. 
+      apakah ada yang bisa saya bantu?
+  - text: |
+      Saya adalah asisten virtual yang siap membantu Anda dengan tracer study.
+      apakah ada yang bisa saya bantu?
+  - text: |
+      Saya adalah chatbot asisten tracer study yang siap membantu Anda dengan informasi seputar tracer study.
+      apakah ada yang bisa saya bantu?
+  utter_mood_great:
+  - text: |
+      Senang mendengarnya!
+      Semoga harimu menyenangkan🥰
+  - text: Wah hebat! Semangat terus ya🥰
+  utter_mood_unhappy:
+  - text: Maaf mendengarnya. Jika saya bisa membantu, silakan beri tahu ya.
+  - text: Semoga harimu segera membaik. Saya siap membantu jika dibutuhkan.
+  utter_bot_challenge:
+  - text: Saya adalah asisten virtual untuk membantu alumni mengisi tracer study.
+  - text: Saya chatbot yang dirancang untuk membantu Anda, khususnya terkait tracer study alumni.
+  - text: Saya adalah chatbot tracer study yang siap membantu Anda dengan informasi seputar tracer study.
+  - text: Saya adalah chatbot tracer study yang siap menemani seputar tracer study anda.
+  utter_tanya_tujuan_tracer:
+  - text: Tracer study bertujuan untuk mengetahui perkembangan lulusan setelah menyelesaikan studi dan sebagai bahan evaluasi serta akreditasi kampus.
+  - text: |
+      Tracer study merupakan system evaluasi alumni yang bertujuan untuk mengumpulkan data tentang lulusan,
+      termasuk karir dan kepuasan mereka terhadap pendidikan yang diterima selama perkuliahan.
+  - text: |
+      Tujuan tracer study adalah aplikasi pengumpulan informasi tentang lulusan,
+      termasuk karir dan kepuasan mereka terhadap pendidikan yang diterima.
+  - text: Tracer study bertujuan untuk mengetahui perkembangan lulusan setelah menyelesaikan studi dan sebagai bahan evaluasi serta akreditasi kampus.
+  utter_info_formulir_tracer:
+  - text: |
+      Baik, untuk pengisian tracer studi, anda bisa mengikuti panduan dengan membagikan informasi seputar aktivitas anda sekarang ini.
+      Jika anda butuh bantuan saya bisa bantu?
+  - text: |
+      Baik, untuk pengisian tracer studi, kami perlu mengumpulkan data & dan informasi dari anda, Apakah Anda bersedia untuk membagikan data & informasi anda sebagai proses *Tracer Study* Kami?.
+      Jika anda butuh bantuan saya bisa bantu?
+  - text: |
+      Untuk pengisian tracer study, anda cukup memberikan informasi anda seputar data diri. 
+      seperti: 
+      nama, alamat, aktivitas sekarang, dan lain-lain.
+      Apakah butuh panduan?
+  utter_status_pengisian_tracer:
+  - text: |
+      Untuk mengecek status pengisian tracer study,
+      silakan login ke sistem atau hubungi pihak kampus melalui kontak yang tersedia.
+  utter_info_kontak:
+  - text: |
+      Anda bisa menghubungi bagian admin tracer study melalui 
+      email: tracer@unpacti.ac.id 
+      atau melalui WhatsApp: +62853-4881-0286
+  - text: |
+      Silakan hubungi pihak kampus di nomor: (021) 12345678 
+      atau melalui email tracer@unpacti.ac.id.
+  utter_bantuan:
+  - text: |
+      Silakan tanyakan apa yang ingin Anda ketahui.
+      Saya siap membantu Anda mengisi tracer atau informasi seputar alumni.
+  utter_saran_masukan:
+  - text: |
+      Terima kasih atas masukannya!
+      Kami akan terus berupaya meningkatkan layanan.
+  utter_confirm_greet:
+  - text: |
+      Baik, terima kasih atas responnya bisakah anda menyebutkan nama lengkap Anda."
+  utter_identifikasi_nim_mahasiswa:
+  - text: Terima kasih  bisakah kamu menyebutkan Nomor Induk Mahasiswa (NIM) Anda?
+  utter_identifikasi_fakultas_mahasiswa:
+  - text: Apa nama fakultas Anda?
+  utter_identifikasi_prodi_mahasiswa:
+  - text: Sebutkan nama program studi Anda?
+  utter_identifikasi_kode_PT_universitas:
+  - text: Sebutkan Kode PT Universitas Anda?
+  utter_identifikasi_tahun_masuk:
+  - text: Tahun berapa Anda masuk?
+  utter_identifikasi_tahun_lulus:
+  - text: dan Anda Lulus tahun berapa?
+  utter_identifikasi_kode_prodi:
+  - text: Berapa Nomor Kode Prodi kampus Anda?
+  utter_identifikasi_email_mahasiswa:
+  - text: Sebutkan alamat email aktif Anda
+  utter_identifikasi_nomor_telepon:
+  - text: Sebutkan berapa nomor telepon Anda?
+  utter_identifikasi_npwp_mahasiswa:
+  - text: Sebutkan NPWP Anda.
+  utter_identifikasi_nik_mahasiswa:
+  - text: Sebutkan nomor NIK Anda
+  utter_identifikasi_alamat:
+  - text: Dimana alamat tempat tinggal anda
+  utter_kuesioner_f8:
+  - text: |
+      Terima kasih *{nama_lengkap}*, data kamu telah terverifikasi. mari kita lanjut
+      Jelaskan status Anda saat ini.
+      *Pilih salah satu yang paling sesuai dengan status Anda sekarang.*
+      Bekerja
+      Melanjutkan Pendidikan
+      wirausaha
+      Belum Bekerja
+      Tidak bekerja tapi sedang mencari pekerjaan
+      Lainnya
+  utter_kuesioner_f502:
+  - text: |
+      Jika anda memilih bekerja.
+      Dalam berapa bulan anda mendapatkan pekerjaan pertama setelah lulus?  
+  utter_kuesioner_f503:
+  - text: |
+      Jika anda memilih berwirausaha.
+      Dalam berapa bulan setelah lulus anda memulai wirausaha?
+  utter_kuesioner_f504:
+  - text: |-
+      Berapa rata-rata pendapatan anda perbulan?
+      (take home pay)?
+  utter_kuesioner_f505:
+  - text: |
+      dimana lokasi anda bekerja? 
+      seperti:
+      Provinsi?, Kota?, Kabupaten?, Kecamatan?, Desa?
+  utter_kuesioner_f506:
+  - text: |
+      Apa jenis perusahaan/instansi/institusi tempat anda bekerja sekarang?
+      contoh input:
+      - BUMN/BUMD
+      - Instansi Pemerintah
+      - wiraswasta
+      - organisasi non profit/lembaga swadaya masyarakat
+      - perusahaan swasta
+      - wiraswasta/perusahaan sendiri
+      - institusi/organisasi multilateral
+      - Lainnya
+  utter_kuesioner_f507:
+  - text: Apa nama perusahaan/kantor tempat anda bekerja?
+  utter_kuesioner_f508:
+  - text: |
+      Bila wiraswasta, apa posisi/jabatan anda saat ini diperusahaan wiraswasta?
+      contoh input: 
+      pemilik
+      direktur
+      manager
+      supervisor
+      staff
+      karyawan tetap
+      karyawan tidak tetap
+      Lainnya
+  utter_kuesioner_f509:
+  - text: Apa tingkat tempat kerja/wirausaha anda?
+  utter_kuesioner_f510:
+  - text: |
+      Pertanyaan studi lanjutan.
+      Dari mana sumber biaya biaya studi anda?
+  utter_kuesioner_f5101:
+  - text: |
+      Jika anda melanjutkan studi,
+      sebutkan nama perguruan tinggi apa yang anda Pilih?
+  utter_kuesioner_f5102:
+  - text: |
+      Jika anda melanjutkan studi,
+      Program studi apa yang anda pilih?
+  utter_kuesioner_f5103:
+  - text: |
+      Jika anda melanjutkan studi,
+      kapan anda mulai masuk?
+  utter_kuesioner_f511:
+  - text: |
+      Sebutkan sumber dana dalam pembiayaan kuliah Anda
+      - Beasiswa ADIK
+      - Biaya sendiri/keluarga
+      - Biaya BIDIKMISI
+      - Beasiswa PPA
+      - Beasiswa AFIRMASI
+      - Beasiswa Perusahaan/Swasta
+      - Lainnya
+  utter_kuesioner_f512:
+  - text: |
+      Seberapa erat hubungan bidang studi dengan pekerjaan anda?
+      - Sangat erat
+      - Erat
+      - Cukup erat
+      - Kurang erat
+      - Tidak ada hubungan sama sekali
+  utter_kuesioner_f513:
+  - text: |
+      Tingkat pendidikan apa yang paling tepat/sesuai untuk pekerjaan anda saat ini?
+      - Setingkat lebih tinggi
+      - Tingkat yang sama
+      - Setingkat lebih rendah
+      - tidak perlu pendidikan
+  utter_kuesioner_f514:
+  - text: |
+      *Pada saat lulus, pada tingkat mana kompetensi di bawah ini Anda kuasai? (A)*
+      *Pada saat ini, pada tingkat mana kompetensi tersebut diperlukan dalam pekerjaan Anda? (B)*
+      *Catatan:*
+      Skala 1 (Sangat Rendah) & 5 (Sangat Tinggi).  
+      Silakan pilih salah satu kompetensi berikut untuk dinilai:
+      - Etika
+      - Keahlian bidang ilmu
+      - Bahasa Inggris
+      - Teknologi Informasi
+      - Komunikasi
+      - Kerja sama tim
+      - Pengembangan diri
+      contoh input:
+      etika (A) 4, etika (B) 5, keahlian (A) 3, keahlian (B) 4, 
+      inggris (A) 2, inggris (B) 3, ti (A) 4, ti (B) 5,
+      komunikasi (A) 3, komunikasi (B) 4, tim (A) 2, tim (B) 3, 
+      pengembangan diri (A) 4, pengembangan diri (B) 5
+  utter_kuesioner_f515:
+  - text: |
+      Menurut anda seberapa besar penekanan pada metode pembelajaran berikut ini di program studi anda?
+      *Tentang Perkuliahan*
+      note:
+      input angka 1 - 5
+      1 sangat besar, 2 besar, 3 cukup besar, 4 kecil, 5 sangat kecil
+  utter_kuesioner_f5151:
+  - text: |
+      Menurut anda seberapa besar penekanan pada metode pembelajaran berikut ini di program studi anda?
+      *Tentang Demonstrasi (implementasi)*
+      note:
+      input angka 1 - 5
+      1 sangat besar, 2 besar, 3 cukup besar, 4 kecil, 5 sangat kecil
+  utter_kuesioner_f5152:
+  - text: |
+      Menurut anda seberapa besar penekanan pada metode pembelajaran berikut ini di program studi anda?
+      *tentang Proyek Riset*
+      note:
+      input angka 1 - 5
+      1 sangat besar, 2 besar, 3 cukup besar, 4 kecil, 5 sangat kecil
+  utter_kuesioner_f5153:
+  - text: |
+      Menurut anda seberapa besar penekanan pada metode pembelajaran berikut ini di program studi anda?
+      *Tentang Magang*
+      note:
+      input angka 1 - 5
+      1 sangat besar, 2 besar, 3 cukup besar, 4 kecil, 5 sangat kecil
+  utter_kuesioner_f5154:
+  - text: |
+      Menurut anda seberapa besar penekanan pada metode pembelajaran berikut ini di program studi anda?
+      *Tentang Praktikum*
+      note:
+      input angka 1 - 5
+      1 sangat besar, 2 besar, 3 cukup besar, 4 kecil, 5 sangat kecil
+  utter_kuesioner_f5155:
+  - text: |
+      Menurut anda seberapa besar penekanan pada metode pembelajaran berikut ini di program studi anda?
+      *Tentang Kerja Lapangan*
+      note:
+      input angka 1 - 5
+      1 sangat besar, 2 besar, 3 cukup besar, 4 kecil, 5 sangat kecil
+  utter_kuesioner_f5156:
+  - text: |
+      Menurut anda seberapa besar penekanan pada metode pembelajaran berikut ini di program studi anda?
+      *tentang DISKUSI*
+      note:
+      input angka 1 - 5
+      1 sangat besar, 2 besar, 3 cukup besar, 4 kecil, 5 sangat kecil
+  utter_kuesioner_f516:
+  - text: |
+      Kapan anda mulai mencari pekerjaan? 
+      *Pekerjaan sambilan tidak termasuk.*
+      == Bulan sebelum lulus ==
+  utter_kuesioner_f5161:
+  - text: |
+      Kapan anda mulai mencari pekerjaan? 
+      *Pekerjaan sambilan tidak termasuk.*
+      == Bulan sesudah lulus ==
+  utter_kuesioner_f517:
+  - text: |
+      Bagaimana anda mencari pekerjaan tersebut? 
+      *(Jawaban bisa lebih dari satu)*
+      - Melalui iklan di koran/majalah, brosur
+      - Melamar ke perusahaan tanpa mengetahui lowongan
+      - Internet
+      - Kementerian/lembaga pemerintah
+      - Bursa kerja kampus
+      - Hubungan dengan dosen
+      - Hubungan dengan kantor tempat magang
+      - Relasi (orang tua, saudara, teman)
+      - Membangun usaha sendiri
+      - Melanjutkan pekerjaan dari masa kuliah
+      - Lainnya
+  utter_kuesioner_f518:
+  - text: |
+      Berapa perusahaan/instansi/institusi yang sudah anda lamar (lewat surat atau e-mail) 
+      sebelum anda memperoleh pekerjaan pertama?
+  utter_kuesioner_f519:
+  - text: |
+      Berapa banyak perusahaan/instansi/institusi yang merespons lamaran anda?
+  utter_kuesioner_f520:
+  - text: |
+      Berapa banyak perusahaan/instansi/institusi yang mengundang anda untuk wawancara?
+  utter_kuesioner_f521:
+  - text: |
+      Apakah anda aktif mencari pekerjaan dalam 4 minggu terakhir? Pilih satu jawaban.
+      Pilih salah satunya:
+      - Tidak
+      - Tidak, tapi saya sedang menunggu hasil lamaran kerja
+      - Ya, saya mulai bekerja dalam 2 minggu ke depan
+      - Ya, saya belum pasti akan bekerja dalam 2 minggu ke depan
+      - Lainnya
+  utter_kuesioner_f522:
+  - text: |
+      Jika menurut anda pekerjaan anda saat ini tidak sesuai dengan pendidikan anda, mengapa anda mengambilnya?
+      *(Jawaban bisa lebih dari satu)*
+      - Pekerjaan tidak sesuai keahlian; pekerjaan saya sekarang sudah sesuai dengan pendidikan saya
+      - Saya belum mendapat pekerjaan yang lebih sesuai
+      - Dipekerjaan ini saya memperoleh prospek karir yang baik
+      - Saya lebih suka bekerja di area pekerjaan yang tidak ada hubungannya dengan pendidikan saya
+      - Saya dipromosikan ke posisi yang kurang berhubungan dengan pendidikan saya dibanding posisi sebelumnya
+      - Saya dapat memperoleh pendapatan yang lebih tinggi dipekerjaan ini
+      - Pekerjaan saya saat ini lebih nyaman/terjamin/secure
+      - Pekerjaan saya saat ini lebih menarik
+      - Pekerjaan saya saat ini lebih memungkinkan saya mengambil pekerjaan tambahan/jadwal yang fleksibel, dll
+      - Pekerjaan saya saat ini lebih dekat dari rumah saya
+      - Pekerjaan saya saat ini lebih menjamin kebutuhan keluarga saya
+      - Pada awal meniti karir, saya harus menerima pekerjaan yang tidak berhubungan dengan pendidikan saya
+      - Lainnya
+  utter_send_email:
+  - text: |
+      Terima Kasih atas partisipasi Anda dalam mengisi Tracer Study. 
+      Kami telah mengirimkan anda file laporan pengisian Tracer Study ke email anda silahkan mengecek email anda.
+  - text: |
+      Terima kasih telah mengisi Tracer Study.
+      Kami telah mengirimkan file laporan Tracer Study ke email anda. Silahkan cek email anda.
+actions:
+- action_default_fallback
+- action_send_whatsapp_menu
+- action_send_whatsapp_template
+- action_save_alumni_data
+- action_send_whatsapp_notification
+- action_process_status_input
+- action_send_text_menu_to_wa
+- action_process_menu_number
+- action_send_email_confirmation
+- action_generate_pdf_report
+- action_send_report_email
+- action_send_whatsapp_reminder
+- action_send_file_to_email
+- action_tanya_lanjutan_tracer
+- action_handle_status_branch
+- action_process_question_answer
+
+- action_validate_status
+- action_save_job_data
+- action_save_education_data
+- action_save_business_data
+- action_save_unemployment_data
+- action_complete_survey
+- action_send_email
+session_config:
+  session_expiration_time: 60
+  carry_over_slots_to_new_session: true

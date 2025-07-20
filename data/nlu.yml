@@ -1,0 +1,821 @@
+version: "3.1"
+nlu:
+- intent: ask_help
+  examples: |
+    - Apakah itu membantu?
+    - Apakah penjelasanmu sudah cukup jelas?
+    - Sudah paham belum ya?
+    - Ini cukup membantu?
+    - Itu membantu gak?
+    - Apakah ini menjawab pertanyaan saya?
+- intent: ask_iamabot
+  examples: |
+    - kamu siapa?
+    - Kamu manusia kah?
+    - Apakah kamu manusia?
+    - Ini AI atau orang?
+- intent: ask_cheer_up
+  examples: |
+    - Aku sedih nih
+    - Bikin aku semangat dong
+    - Hiburlah aku
+    - Aku lagi galau
+    - Tolong ceriahin aku
+    - Kasih aku motivasi dong
+- intent: ask_happy
+  examples: |
+    - Aku lagi senang banget
+    - Aku bahagia sekali
+    - Senang deh
+    - Aku gembira hari ini
+    - Wah aku senang
+    - Aku lagi happy
+- intent: greet
+  examples: |
+    - hi
+    - hi bro
+    - hai
+    - hai bro
+    - halo
+    - halo bro
+    - selamat pagi
+    - selamat siang
+    - selamat sore
+    - selamat malam
+    - apa kabar?
+    - senang bertemu denganmu
+    - assalamualaikum warahmatullahi wabarakatuh
+    - assalamualaikum
+    - waalaikumsalam
+    - woi
+    - woy
+    - hey
+- intent: confirm_help
+  examples: |
+    - tolong bantu saya
+    - saya butuh panduan
+    - bisa bantu saya?
+    - tolong bantu saya ya
+    - bisa tolong bantu saya?
+    - saya butuh panduanmu
+    - bisa bantu saya ya?
+    - tolong bantu saya dong
+    - bisa bantu saya dong?
+    - tentu
+    - ya
+    - yahh
+    - yah
+    - iya
+    - lanjut
+- intent: confirm_greet
+  examples: |
+    - halo juga
+    - hai juga
+    - hai juga bro
+    - hi juga
+    - salam kenal juga
+    - senang bertemu denganmu juga
+    - senang berkenalan denganmu
+    - senang berkenalan dengan anda
+    - senang bertemu dengan anda
+    - saya juga senang bertemu denganmu
+    - saya juga senang bertemu dengan anda
+    - saya juga senang berkenalan denganmu
+    - saya juga senang berkenalan dengan anda
+- intent: affirm
+  examples: |
+    - benar
+    - benar sekali
+    - betul
+    - setuju
+    - pastinya
+- intent: mood_great
+  examples: |
+    - saya merasa sangat baik
+    - luar biasa
+    - saya bahagia
+    - hebat
+    - saya sangat senang
+    - saya baik-baik saja
+    - bagaimana?
+    - menyenangkan
+    - menyenangkan sekali
+    - saya sedang dalam suasana hati yang bagus
+    - mantap
+    - sempurna
+    - alhamdulillah baik
+    - hidup terasa indah
+- intent: mood_unhappy
+  examples: |
+    - saya merasa sedih
+    - hari ini buruk
+    - saya kecewa
+    - saya tidak bahagia
+    - saya sangat sedih
+    - saya stres
+    - saya tidak baik-baik saja
+    - saya bingung
+    - tidak menyenangkan
+- intent: bot_challenge
+  examples: |
+    - kamu manusia atau robot?
+    - kamu ini chatbot ya?
+    - saya sedang bicara dengan bot?
+    - kamu bukan manusia kan?
+    - kamu buatan atau asli?
+    - kamu manusia?
+    - kamu bukan orang beneran ya?
+    - ini robot?
+    - kamu sistem otomatis?
+    - kamu AI ya?
+    - apakah kamu bot?
+    - kamu bot ya?
+    - kamu robot ya?
+    - kamu chatbot ya?
+    - apakah kamu chatbot?
+    - apakah kamu buatan?
+    - apakah kamu buatan manusia?
+- intent: tanya_tujuan_tracer
+  examples: |
+    - apa itu tracer study?
+    - untuk apa tracer study dilakukan?
+    - kenapa saya harus isi tracer study?
+    - tujuan dari tracer study itu apa?
+    - manfaat tracer study untuk kampus apa?
+- intent: info_formulir_tracer
+  examples: |
+    - cara isi tracer study?
+    - cara isi tracer studi?
+    - bagaimana isi tracer alumni?
+    - bagaimana isi tracer studi alumni?
+    - bagaimana cara isi tracer alumni?
+    - bagaimana cara mengisi tracer?
+    - bagaimana cara mengisi tracer alumni?
+    - gimana isi tracer alumni?
+    - gimana cara isi tracer alumni?
+    - gimana cara mengisi tracer?
+    - gimana cara mengisi tracer alumni?
+    - saya ingin mengisi tracer study
+    - saya mau isi formulir tracer
+    - bantu isi tracer studynya ya
+    - bantu isi tracer studynya yah
+    - bantu isi tracer studynya yahh
+- intent: status_pengisian_tracer
+  examples: |
+    - saya sudah isi tracer belum ya?
+    - apakah saya sudah mengisi?
+    - cek status pengisian saya
+    - apakah data saya sudah masuk?
+    - tracer saya sudah dikirim?
+- intent: goodbye
+  examples: |
+    - terima kasih
+    - terima kasih banyak
+    - terima kasih atas bantuannya
+    - terima kasih atas semua bantuannya
+    - terima kasih atas semua pertanyaannya
+    - terima kasih atas semua jawabannya
+    - terima kasih atas semua penjelasannya
+    - terima kasih atas semua informasinya
+    - terima kasih untuk semuanya
+    - terima kasih untuk bantuannya
+    - terima kasih untuk semua bantuannya
+    - terima kasih untuk semua pertanyaannya
+    - terima kasih untuk semua jawabannya
+    - terima kasih untuk semua penjelasannya
+    - terima kasih untuk semua informasinya
+    - oke, makasih
+    - makasih ya
+    - makasih banyak
+    - makasih atas semuanya
+    - makasih atas pertanyaannya
+    - makasih atas semua pertanyaannya
+    - makasih atas semua jawabannya
+    - makasih atas semua penjelasannya
+    - makasih atas semua informasinya
+    - makasih untuk semuanya
+    - makasih untuk bantuannya
+    - makasih untuk semua bantuannya
+    - makasih untuk semua pertanyaannya
+    - makasih untuk semua jawabannya
+    - makasih untuk semua penjelasannya
+    - makasih untuk semua informasinya
+    - sampai ketemu lagi
+    - sampai jumpa
+    - sampai jumpa lagi
+    - sampai jumpa di lain waktu
+    - sampai jumpa di lain kesempatan
+    - sampai jumpa di lain hari
+    - bye
+- intent: info_kontak
+  examples: |
+    - kontak kampus apa ya?
+    - Saya mau hubungi bagian alumni
+    - nomor telepon kampus berapa?
+    - email tracer study apa?
+    - bagaimana saya bisa menghubungi pihak kampus?
+- intent: bantuan
+  examples: |
+    - saya butuh bantuan
+    - tolong bantu saya isi tracer
+    - saya bingung cara pakainya
+    - bagaimana cara menggunakan bot ini?
+    - butuh panduan
+- intent: saran_masukan
+  examples: |
+    - saya punya saran
+    - ada masukan nih
+    - feedback untuk kampus
+    - boleh kasih pendapat?
+    - menurut saya sebaiknya...
+- intent: nama_lengkap
+  examples: |
+    - nama saya [Andi Katibin](nama_lengkap)
+    - nama saya [Muhammad Nur Arafah](nama_lengkap)
+    - nama saya [Rachmat Rakes](nama_lengkap)
+    - nama saya [Boben Mambela](nama_lengkap)
+    - nama saya [Muhammad Awal Nurfajry](nama_lengkap)
+- intent: nim_mahasiswa
+  examples: |
+    - [NIM 521012020](nim_mahasiswa)
+    - [NIM 521012021](nim_mahasiswa)
+    - [NIM 521012022](nim_mahasiswa)
+    - nomor induk [521012023](nim_mahasiswa)
+    - nomor induk saya adalah [521012024](nim_mahasiswa)
+    - nomor induk [521012025](nim_mahasiswa)
+- intent: fakultas_mahasiswa
+  examples: |
+    - nama [Fakultas FMIPA](fakultas_mahasiswa)
+    - saya dari [Fakultas MIPA](fakultas_mahasiswa)
+    - saya berasal dari [Fakultas FISIP](fakultas_mahasiswa)
+    - dari [Fakultas matematika dan ilmu pengetahuan alam](fakultas_mahasiswa)
+    - saya dari [Fakultas FISIPOL](fakultas_mahasiswa)
+    - dari [Fakultas sosial dan politik](fakultas_mahasiswa)
+    - dari [Fakultas kesmas](fakultas_mahasiswa)
+    - [Fakultas FKIP](fakultas_mahasiswa)
+    - mahasiswa [Fakultas FKIP](fakultas_mahasiswa)
+    - saya mahasiswa [Fakultas FKIP](fakultas_mahasiswa)
+    - fakulta [Fakultas keguruan dan ilmu pendidikan](fakultas_mahasiswa)
+    - say [Fakultas fkip](fakultas_mahasiswa)
+    - saya berasal dari [Fakultas kesehatan masyarakat](fakultas_mahasiswa)
+    - [Fakultas ilmu pendidikan](fakultas_mahasiswa)
+    - saya mahasiswa [Fakultas kesmas](fakultas_mahasiswa)
+    - saya dari [Fakultas teknik](fakultas_mahasiswa)
+    - [Fakultas ilmu komputer](fakultas_mahasiswa)
+    - dari [Fakultas ekonomi dan bisnis](fakultas_mahasiswa)
+    - saya [Fakultas pertanian](fakultas_mahasiswa)
+- intent: prodi_mahasiswa
+  examples: |
+    - prodi [Ilmu komputer](prodi_mahasiswa)
+    - prodi [Ilmu komunikasi](prodi_mahasiswa)
+    - prodi [Ilmu pemerintahan](prodi_mahasiswa)
+    - [Magister Ilmu Pemerintahan](prodi_mahasiswa)
+    - prodi [Pendidikan Fisika](prodi_mahasiswa)
+    - prodi [Pendidikan Matematika](prodi_mahasiswa)
+    - prodi [Pendidikan Bahasa Inggris](prodi_mahasiswa)
+    - prodi [Pendidikan Bahasa Indonesia](prodi_mahasiswa)
+    - prodi [Kesehatan Masyarakat](prodi_mahasiswa)
+    - prodi [Farmasi](prodi_mahasiswa)
+- intent: kode_PT_universitas
+  examples: |
+    - [Kode 091017](kode_PT_universitas)
+    - kode PT [091017](kode_PT_universitas)
+    - kode PT saya adalah [091017](kode_PT_universitas)
+    - Saya dari [UNPACTI](kode_PT_universitas)
+    - dari [Universitas Pancasakti](kode_PT_universitas)
+- intent: tahun_masuk
+  examples: |
+    - saya masuk [angkatan 2019](tahun_masuk)
+    - saya masuk [angkatan 2020](tahun_masuk)
+    - saya masuk [angkatan 2021](tahun_masuk)
+    - saya masuk [angkatan 2022](tahun_masuk)
+- intent: tahun_lulus
+  examples: |
+    - saya [lulus tahun 2019](tahun_lulus)
+    - saya [lulus tahun 2020](tahun_lulus)
+    - saya [lulus tahun 2021](tahun_lulus)
+    - saya [lulus tahun 2022](tahun_lulus)
+    - saya [lulus tahun 2023](tahun_lulus)
+    - saya [lulus tahun 2024](tahun_lulus)
+    - saya [lulus tahun 2025](tahun_lulus)
+    - saya [lulus tahun 2026](tahun_lulus)
+- intent: kode_prodi
+  examples: |
+    - [kode prodi 55201](kode_prodi)
+    - [kode prodi 70201](kode_prodi)
+    - [kode prodi 65201](kode_prodi)
+    - [kode prodi 65101](kode_prodi)
+    - [kode prodi 84203](kode_prodi)
+    - [kode prodi 88201](kode_prodi)
+    - [kode prodi 13201](kode_prodi)
+    - [kode prodi 48201](kode_prodi)
+- intent: no_telp
+  examples: |
+    - No. [telp 085825592601](no_telp)
+    - No. [telp 085348810286](no_telp)
+    - No. [telp 0897654321](no_telp)
+    - No. [telp 081234567890](no_telp)
+    - No. [telp 0813-9876-1234](no_telp)
+    - No. [telp 0812 3456 7890](no_telp)
+    - No. [telp 6281234567890](no_telp)
+    - No. [telp 08221234567](no_telp)
+    - No. [telp 081212345678](no_telp)
+- intent: email
+  examples: |
+    - alamat email saya [andikatibinzain002@gmail.com](email)
+    - alamat email [pdpt@unpacti.ac.id](email)
+    - email saya [mnurarafah18@gmail.com](email)
+    - email [yohanuhel@gmail.com](email)
+- intent: nik_mahasiswa
+  examples: |
+    - [nik 6171052809770002](nik_mahasiswa)
+    - [nik 7411016302980001](nik_mahasiswa)
+    - [nik 7602095410990001](nik_mahasiswa)
+- intent: alamat
+  examples: |
+    - alamat [jalan mangerangi no 128, makassar](alamat)
+    - alamat [jalan mangerangi no 128, sulsel, makassar](alamat)
+    - alamat [saya jalan raya no 123, jakarta](alamat)
+    - alamat [jalan raya no 123, depok](alamat)
+    - alamat [saya jalan raya no 123, depok](alamat)
+    - alamat [jalan raya no 123, bogor](alamat)
+    - alamat [jalan raya no 123, tangerang](alamat)
+- intent: npwp
+  examples: |
+    - Nomor [NPWP 77.509.464.2-024.000](npwp)
+    - saya adalah [NPWP 77.509.464.2-024.000](npwp)
+    - Berikut NPWP saya: [NPWP 96.618.790.8-807.000](npwp)
+    - Ini adalah NPWP saya [NPWP 41.326.847.5-804.000](npwp)
+    - Saya memiliki NPWP [NPWP 55.123.456.7-890.000](npwp)
+    - NPWP aktif saya [NPWP 09.876.543.2-111.000](npwp)
+    - Silakan catat NPWP saya [NPWP 12.345.678.9-012.000](npwp)
+- intent: kode_f8
+  examples: |
+    - sekarang [Bekerja](status)
+    - Saya [Bekerja](status)
+    - Status saya [Bekerja](status)
+    - saya sekarang [Bekerja](status)
+    - saya sekarang sedang [Bekerja](status)
+    - Saya sekarang [Melanjutkan Pendidikan](status)
+    - Saya sekarang sedang [Melanjutkan Pendidikan](status)
+    - Saya [Wirausaha](status)
+    - menjalankan [Wirausaha](status)
+    - Saya sedang [Wirausaha](status)
+    - Saya masih [Belum Bekerja](status)
+    - Saya [Belum Bekerja](status)
+    - sedang [Bekerja](status) di perusahaan
+    - Sedang [Melanjutkan Pendidikan](status) S2
+    - Memiliki [Wirausaha](status) sendiri
+    - Masih dalam status [Belum Bekerja](status)
+    - sekarang [Belum Bekerja](status)
+    - saya [Tidak Bekerja](status) Tapi [Sedang Mencari Pekerjaan](status)
+    - [Tidak Bekerja Tapi Sedang Mencari Pekerjaan](status)
+    - [Yang Lainnya](status)
+- intent: kode_f502
+  examples: |
+    - mulai kerja dalam 1 bulan setelah lulus
+    - 2 bulan setelah lulus
+    - mulai kerja dalam 3 bulan setelah lulus
+    - mulai kerja dalam 4 bulan setelah lulus
+    - mulai kerja dalam 5 bulan setelah lulus
+    - mulai kerja dalam 1 bulan
+    - 2 bulan
+    - mulai kerja dalam 3 bulan
+    - mulai kerja dalam 4 bulan
+    - mulai kerja dalam 5 bulan
+- intent: kode_f503
+  examples: |
+    - mulai wirausaha dalam 1 bulan setelah lulus
+    - mulai wirausaha dalam 2 bulan setelah lulus
+    - mulai wirausaha dalam 3 bulan setelah lulus
+    - mulai wirausaha dalam 4 bulan setelah lulus
+    - mulai wirausaha dalam 1 bulan
+    - mulai wirausaha dalam 2 bulan
+    - mulai wirausaha dalam 3 bulan
+    - mulai wirausaha dalam 4 bulan
+    - mulai dalam 1 bulan
+    - mulai dalam 2 bulan
+    - mulai dalam 3 bulan
+    - mulai dalam 4 bulan
+- intent: kode_f504
+  examples: |
+    - belum ada
+    - Rp. 0
+    - Rp. 500 ribu
+    - Rp. 1.000.000 juta
+    - Rp. 1,5 juta
+    - Rp. 1.500.000 juta
+    - Rp. 2.000.000 juta
+    - Rp. 2,5 juta
+    - Rp. 2.500.000 juta
+    - Rp. 3.000.000 juta
+    - Rp. 3,5 juta
+    - Rp. 3.500.000 juta
+    - Rp. 4.000.000 juta
+    - Rp. 4,5 juta
+    - Rp. 4.500.000 juta
+    - Rp. 5.000.000 juta
+    - Rp. 5,5 juta
+    - Rp. 5.500.000 juta
+- intent: kode_f505
+  examples: |
+    - Saya bekerja di [jakarta selatan, jakarta](kode_f505)
+    - Saya bekerja di [jakarta timur, jakarta](kode_f505)
+    - Saya bekerja di [jakarta barat, jakarta](kode_f505)
+    - Saya bekerja di [jakarta utara, jakarta](kode_f505)
+    - Saya bekerja di [jakarta pusat, jakarta](kode_f505)
+    - saya bekerja di [sulawesi selatan, kabupaten gowa](kode_f505)
+- intent: kode_f506
+  examples: |
+    - BUMN/BUMD
+    - Instansi Pemerintah
+    - organisasi non profit/lembaga swadaya masyarakat
+    - perusahaan swasta
+    - wiraswasta/perusahaan sendiri
+    - institusi/organisasi multilateral
+    - Lainnya
+- intent: kode_f507
+  examples: |
+    - di [novotel](kode_f507)
+    - di [kalla group](kode_f507)
+    - di [telkomsel](kode_f507)
+    - di [bank bri](kode_f507)
+    - di [bank bni](kode_f507)
+    - di [bank bca](kode_f507)
+- intent: kode_f508
+  examples: |
+    - sebagai karyawan
+    - sebagai pemilik
+    - sebagai direktur
+    - sebagai dw
+    - sebagai staff
+    - sebagai manager
+    - sebagai supervisor
+    - sebagai asisten
+    - sebagai dosen
+- intent: kode_f509
+  examples: |
+    - swasta
+    - negri
+    - freelance
+    - wiraswasta
+    - sebagai [pegawai swasta](kode_f509)
+    - abdinegara
+    - sebagai [pegawai negeri](kode_f509) [PNS](kode_f509)
+    - sebagai [pegawai negeri sipil](kode_f509) [PNS](kode_f509)
+- intent: kode_f510
+  examples: |
+    - Biaya mandiri
+    - menggunakan beasiswa
+    - menggunakan beasiswa bidikmisi
+    - menggunakan beasiswa afirmasi
+    - menggunakan beasiswa ppa
+    - menggunakan beasiswa perusahaan/swasta
+- intent: kode_f5101
+  examples: |
+    - unhas
+    - ugm
+    - unm
+    - uin
+    - ui
+- intent: kode_f5102
+  examples: |
+    - teknik informatika
+    - sistem informasi
+    - komunikasi
+    - dokpol
+    - pertahanan
+- intent: kode_f5103
+  examples: |
+    - saya mulai masuk tahun 2021
+    - saya mulai masuk tahun 2022
+    - saya mulai masuk tahun 2023
+    - saya mulai masuk tahun 2024
+    - saya mulai masuk tahun 2025
+- intent: kode_f511
+  examples: |
+    - Saya menerima beasiswa ADIK
+    - Saya mendapatkan beasiswa mandiri dari kampus
+    - Jenis beasiswa saya adalah beasiswa prestasi
+    - Saya memperoleh beasiswa PPA tahun lalu
+    - Saya mendapatkan beasiswa AFIRMASI dari pemerintah
+    - Saya menerima beasiswa dari perusahaan swasta
+    - Beasiswa yang saya dapatkan tidak disebutkan, lainnya
+- intent: kode_f512
+  examples: |
+    - Sangat erat
+    - Erat
+    - Cukup erat
+    - Kurang erat
+    - Tidak ada hubungan sama sekali
+- intent: kode_f513
+  examples: |
+    - Setingkat lebih tinggi
+    - Tingkat yang sama
+    - Setingkat lebih rendah
+    - tidak perlu pendidikan
+- intent: kode_f514
+  examples: |
+    - etika (A) 4 & etika (B) 5
+    - keahlian (A) 3 & keahlian (B) 4
+    - inggris (A) 2 & inggris (B) 3
+    - ti (A) 4 & ti (B) 5
+    - komunikasi (A) 3 & komunikasi (B) 4
+    - tim (A) 2 & tim (B) 3
+    - pengembangan diri (A) 4 & pengembangan diri (B) 5
+- intent: kode_f515
+  examples: |
+    - Tentang Perkuliahan nilainya sangat besar
+    - Tentang Perkuliahan nilainya besar
+    - Tentang Perkuliahan nilainya cukup besar
+    - Tentang Perkuliahan nilainya kecil
+    - Tentang Perkuliahan nilainya sangat kecil
+- intent: kode_f5151
+  examples: |
+    - demonstrasi nilainya sangat besar
+    - demonstrasi nilainya besar
+    - demonstrasi nilainya cukup besar
+    - demonstrasi nilainya kecil
+    - demonstrasi nilainya sangat kecil
+- intent: kode_f5152
+  examples: |
+    - tentang Proyek Riset sangat besar
+    - tentang Proyek Riset besar
+    - tentang Proyek Riset cukup besar
+    - tentang Proyek Riset kecil
+    - tentang Proyek Riset sangat kecil
+- intent: kode_f5153
+  examples: |
+    - tentang magang sangat besar (1)
+    - tentang magang besar (2)
+    - tentang magang cukup besar (3)
+    - tentang magang kecil (4)
+    - tentang magang sangat kecil (5)
+- intent: kode_f5154
+  examples: |
+    - tentang praktikum sangat besar
+    - tentang praktikum besar
+    - tentang praktikum cukup besar
+    - tentang praktikum kecil
+    - tentang praktikum sangat kecil
+- intent: kode_f5155
+  examples: |
+    - tentang kerja lapangan sangat besar
+    - tentang kerja lapangan besar
+    - tentang kerja lapangan cukup besar
+    - tentang kerja lapangan kecil
+    - tentang kerja lapangan sangat kecil
+- intent: kode_f5156
+  examples: |
+    - tentang diskusi sangat besar
+    - tentang diskusi besar
+    - tentang diskusi cukup besar
+    - tentang diskusi kecil
+    - tentang diskusi sangat kecil
+- intent: kode_f516
+  examples: |
+    - 1 bulan sebelum lulus
+    - 2 bulan sebelum lulus
+    - 3 bulan sebelum lulus
+    - 4 bulan sebelum lulus
+- intent: kode_f5161
+  examples: |
+    - 1 bulan terakhir setelah lulus
+    - 2 bulan terakhir setelah lulus
+    - 3 bulan terakhir setelah lulus
+    - 4 bulan terakhir setelah lulus
+- intent: kode_f517
+  examples: |
+    - Melalui iklan di koran/majalah, brosur
+    - Melamar ke perusahaan tanpa mengetahui lowongan
+    - Internet
+    - Kementerian/lembaga pemerintah
+    - Bursa kerja kampus
+    - Hubungan dengan dosen
+    - Hubungan dengan kantor tempat magang
+    - Relasi (orang tua, saudara, teman)
+    - Membangun usaha sendiri
+    - Melanjutkan pekerjaan dari masa kuliah
+    - Lain
+- intent: kode_f518
+  examples: |
+    - (1) perusahaan
+    - (2) perusahaan
+    - (3) perusahaan
+- intent: kode_f519
+  examples: |
+    - ada 1 lamaran perusahaan
+    - ada 2 lamaran perusahaan
+    - ada 3 lamaran perusahaan
+    - ada 4 lamaran perusahaan
+    - ada 5 lamaran perusahaan
+- intent: kode_f520
+  examples: |
+    - terdapat 1 kali wawancara dari perusahaan
+    - terdapat 2 kali wawancara dari perusahaan
+    - terdapat 3 kali wawancara dari perusahaan
+    - terdapat 4 kali wawancara dari perusahaan
+    - terdapat 5 kali wawancara dari perusahaan
+- intent: kode_f521
+  examples: |
+    - Tidak
+    - Tidak, tapi saya sedang menunggu hasil lamaran kerja
+    - Ya, saya mulai bekerja dalam 2 minggu ke depan
+    - Ya, saya belum pasti akan bekerja dalam 2 minggu ke depan
+    - Lain-nya
+- intent: kode_f522
+  examples: |
+    - Pekerjaan tidak sesuai keahlian; pekerjaan saya sekarang sudah sesuai dengan pendidikan saya
+    - Saya belum mendapat pekerjaan yang lebih sesuai
+    - Dipekerjaan ini saya memperoleh prospek karir yang baik
+    - Saya lebih suka bekerja di area pekerjaan yang tidak ada hubungannya dengan pendidikan saya
+    - Saya dipromosikan ke posisi yang kurang berhubungan dengan pendidikan saya dibanding posisi sebelumnya
+    - Saya dapat memperoleh pendapatan yang lebih tinggi dipekerjaan ini
+    - Pekerjaan saya saat ini lebih nyaman/terjamin/secure
+    - Pekerjaan saya saat ini lebih menarik
+    - Pekerjaan saya saat ini lebih memungkinkan saya mengambil pekerjaan tambahan/jadwal yang fleksibel, dll
+    - Pekerjaan saya saat ini lebih dekat dari rumah saya
+    - Pekerjaan saya saat ini lebih menjamin kebutuhan keluarga saya
+    - Pada awal meniti karir, saya harus menerima pekerjaan yang tidak berhubungan dengan pendidikan saya
+# - lookup: nama_lengkap
+#   examples: |
+#     - Andi Katibin
+#     - Muhammad Nur Arafah
+#     - Rachmat Rakes
+#     - Boben Mambela
+#     - Muhammad Awal Nurfajry
+# - lookup: nim_mahasiswa
+#   examples: |
+#     - NIM 521012020
+#     - NIM 521012021
+#     - NIM 521012022
+#     - NIM 521012023
+#     - NIM 521012025
+# - lookup: fakultas_mahasiswa
+#   examples: |
+#     - Fakultas FMIPA
+#     - Fakultas MIPA
+#     - Fakultas FISIP
+#     - Fakultas matematika dan ilmu pengetahuan alam
+#     - Fakultas FISIPOL
+#     - Fakultas sosial dan politik
+#     - Fakultas kesmas
+#     - Fakultas FKIP
+#     - Fakultas FKIP
+#     - Fakultas FKIP
+#     - Fakultas keguruan dan ilmu pendidikan
+#     - Fakultas fkip
+#     - Fakultas kesehatan masyarakat
+#     - Fakultas ilmu pendidikan
+#     - Fakultas kesmas
+#     - Fakultas teknik
+#     - Fakultas ilmu komputer
+#     - Fakultas ekonomi dan bisnis
+#     - Fakultas pertanian
+# - lookup: prodi_mahasiswa
+#   examples: |
+#     - Ilmu Komputer
+#     - Ilmu Komunikasi
+#     - Ilmu Pemerintahan
+#     - Magister Ilmu Pemerintahan
+#     - Pendidikan Fisika
+#     - Pendidikan Matematika
+#     - Pendidikan Bahasa Inggris
+#     - Pendidikan Bahasa Indonesia
+#     - Kesehatan Masyarakat
+#     - Farmasi
+# - lookup: kode_PT_universitas
+#   examples: |
+#     - Kode 091017
+#     - UNPACTI
+#     - Universitas Pancasakti
+# - lookup: kode_prodi
+#   examples: |
+#     - kode prodi 55201
+#     - kode prodi 70201
+#     - kode prodi 65201
+#     - kode prodi 65101
+#     - kode prodi 84203
+#     - kode prodi 88201
+#     - kode prodi 13201
+#     - kode prodi 48201
+# - lookup: tahun_masuk
+#   examples: |
+#     - angkatan 2019
+#     - angkatan 2020
+#     - angkatan 2021
+#     - angkatan 2022
+# - lookup: tahun_lulus
+#   examples: |
+#     - lulus tahun 2019
+#     - lulus tahun 2020
+#     - lulus tahun 2021
+#     - lulus tahun 2022
+#     - lulus tahun 2023
+#     - lulus tahun 2024
+#     - lulus tahun 2025
+#     - lulus tahun 2026
+# - lookup: no_telp
+#   examples: |
+#     - No. HP 085825592601
+#     - No. HP 085348810286
+#     - No. HP 0897654321
+#     - No. HP 081234567890
+#     - No. HP 0813-9876-1234
+#     - No. HP 0812 3456 7890
+#     - No. HP 6281234567890
+#     - No. HP 08221234567
+#     - No. HP 081212345678
+# - lookup: email
+#   examples: |
+#     - andikatibinzain002@gmail.com
+#     - pdpt@unpacti.ac.id
+#     - mnurarafah18@gmail.com
+#     - yohanuhel@gmail.com
+# - lookup: nik_mahasiswa
+#   examples: |
+#     - nik 6171052809770002
+#     - nik 7411016302980001
+#     - nik 7602095410990001
+# - lookup: alamat
+#   examples: |
+#     - alamat jalan mangerangi no 128, makassar
+#     - alamat jalan mangerangi no 128, sulsel, makassar
+#     - alamat saya jalan raya no 123, jakarta
+#     - alamat jalan raya no 123, depok
+#     - alamat saya jalan raya no 123, depok
+#     - alamat jalan raya no 123, bogor
+#     - alamat jalan raya no 123, tangerang
+# - lookup: npwp
+#   examples: |
+#     - NPWP 77.509.464.2-024.000
+#     - NPWP 96.618.790.8-807.000
+#     - NPWP 41.326.847.5-804.000
+#     - NPWP 55.123.456.7-890.000
+#     - NPWP 09.876.543.2-111.000
+#     - NPWP 12.345.678.9-012.000
+# - lookup: status
+#   examples: |
+#     - Bekerja
+#     - Melanjutkan Pendidikan
+#     - Wirausaha
+#     - Belum Bekerja
+#     - Tidak Bekerja Tapi Sedang Mencari Pekerjaan
+#     - Yang Lainnya
+# - regex: nim_mahasiswa
+#   examples: |
+#     - ^[0-9]{8,15}$
+
+# - regex: nik_mahasiswa
+#   examples: |
+#     - ^[0-9]{16}$
+
+# - regex: no_telp
+#   examples: |
+#     - ^08[0-9]{8,11}$
+
+# - regex: npwp
+#   examples: |
+#     - ^[0-9]{15,16}$
+
+# - regex: tahun_masuk
+#   examples: |
+#     - ^(19|20)\d{2}$
+
+# - regex: tahun_lulus
+#   examples: |
+#     - ^(19|20)\d{2}$
+
+# - regex: kode_prodi
+#   examples: |
+#     - ^[A-Z0-9]{3,6}$
+
+# - regex: kode_PT_universitas
+#   examples: |
+#     - ^PT[A-Z0-9]{4,8}$
+
+# # Regex untuk pola input kode_f509
+# - regex: kode_f509
+#   examples: |
+#     - ^pegawai (swasta|negeri)( sipil)?( PNS)?$
+
+# # Lookup untuk kode_f507 — bank
+# - lookup: kode_f507
+#   examples: |
+#     - bank bca
+#     - bank mandiri
+#     - BRI
+#     - BTN
+
+# # Lookup untuk kode_f505 – lokasi
+# - lookup: kode_f505
+#   examples: |
+#     - F505-jakarta selatan
+#     - F505-jakarta timur
+#     - F505-sulawesi selatan
+
+# # Intent example termasuk anotasi entitas
+# - intent: kode_f509
+#   examples: |
+#     - Saya adalah [pegawai swasta](kode_f509)
+#     - Saya bekerja sebagai [PNS](kode_f509)

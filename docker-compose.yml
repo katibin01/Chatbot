@@ -1,0 +1,54 @@
+version: '3.8'
+
+services:
+  whatsapp-bot:
+    build: .
+    container_name: whatsapp-ai-bot
+    restart: unless-stopped
+    environment:
+      - NODE_ENV=production
+      - RASA_URL=http://rasa:5005/webhooks/rest/webhook
+      - LOG_LEVEL=info
+      - ENABLE_HEALTH_CHECK=true
+      - ENABLE_ANALYTICS=true
+    volumes:
+      - ./logs:/app/logs
+      - ./data:/app/data
+      - ./config:/app/config
+    ports:
+      - "3001:3001"
+    depends_on:
+      - rasa
+    networks:
+      - bot-network
+
+  rasa:
+    image: rasa/rasa:3.6.0
+    container_name: rasa-server
+    restart: unless-stopped
+    volumes:
+      - ./rasa-project:/app
+    command: run --enable-api --cors "*"
+    ports:
+      - "5005:5005"
+    networks:
+      - bot-network
+
+  redis:
+    image: redis:7-alpine
+    container_name: redis-cache
+    restart: unless-stopped
+    command: redis-server --appendonly yes
+    volumes:
+      - redis-data:/data
+    ports:
+      - "6379:6379"
+    networks:
+      - bot-network
+
+networks:
+  bot-network:
+    driver: bridge
+
+volumes:
+  redis-data:
