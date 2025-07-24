@@ -24,7 +24,7 @@ tracker_store:
   dialect: "postgresql"         # Supported options: "mysql", "postgresql", "sqlite"
   url: "localhost"              # Hostname of the database server
   port: 5432                    # Default MySQL port
-  db: "laravel12"              # Database name
+  db: "laravel12"               # Database name
   username: "postgres"          # Database username
   password: "botn4no"           # Database password
   # query: "?charset=utf8mb4"     # Additional query string options (optional)

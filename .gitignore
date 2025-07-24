@@ -8,9 +8,10 @@ node_modules/
 /models
 .node-persist/storage
 .story_graph.dot
-.storage
+storage
 /.results
-.reports
+reports
+requirements.txt
 .env
 .env.backup
 .env.production
@@ -19,6 +20,7 @@ node_modules/
 /_IGNORE_TRACER_STUDY_BOT
 /_IGNORE_session
 /lib
+CHATBOT_AI.data.json
 docs.txt
 .rasa/cache*
 
