@@ -19,15 +19,6 @@ action_endpoint:
 # https://rasa.com/docs/rasa/tracker-stores
 
 # Tracker Store configuration for persistent conversations
-tracker_store:
-  type: SQL
-  dialect: "postgresql"         # Supported options: "mysql", "postgresql", "sqlite"
-  url: "localhost"              # Hostname of the database server
-  port: 5432                    # Default MySQL port
-  db: "laravel12"               # Database name
-  username: "postgres"          # Database username
-  password: "botn4no"           # Database password
-  # query: "?charset=utf8mb4"     # Additional query string options (optional)
 
 
 #tracker_store:
