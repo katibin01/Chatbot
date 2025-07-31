@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="https://raw.githubusercontent.com/katibin01/Chatbot/main/assets/logo.png" width="400" height="100" alt="Chatbot WhatsApp AI Logo" />
+  <img src="https://raw.githubusercontent.com/katibin01/Chatbot/main/assets/logo.png" width="400" height="200" alt="Chatbot WhatsApp AI Logo" />
 </p>
 
 <h1 align="center">Chatbot WhatsApp AI</h1>
