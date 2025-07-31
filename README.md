@@ -57,7 +57,7 @@ npm start
 
 | Variable | Default | Description |
 |----------|---------|-------------|
-| `RASA_URL` | `http://localhost:5005/webhooks/rest/webhook` | Rasa server endpoint |
+| `RASA_URL` | `http://localhost:5005/webhooks/rest/webhook`, `http://localhost:5005/webhook` | Rasa server endpoint |
 | `BOT_NAME` | `AI Assistant` | Bot display name |
 | `MAX_SESSIONS` | `1000` | Maximum concurrent sessions |
 | `SESSION_TIMEOUT` | `1800000` | Session timeout (30 minutes) |
