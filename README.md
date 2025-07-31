@@ -78,6 +78,8 @@ Opsional (untuk interaktif chat via shell):
 rasa shell
 ```
 
+---
+
 ### 📱 Jalankan Chatbot WhatsApp
 - Pastikan WhatsApp account aktif dan terhubung ke WhatsApp Web:
 ```bash
@@ -85,15 +87,21 @@ npm start
 ```
 - Chatbot akan otomatis terhubung ke WhatsApp Web dan siap menerima pesan.
 
+---
+
 ### 🧪 Testing Fitur
 - Gunakan `rasa shell` untuk menguji fitur chatbot secara interaktif.
 - Gunakan `curl` atau `Postman` untuk menguji endpoint API chatbot.
+
+---
 
 ### 💬 Tes Respon dari WhatsApp
 1. Jalankan npm start
 2. Scan QR Code WhatsApp
 3. Kirim pesan seperti hi, halo, siapa kamu, dll
 4. Bot akan menjawab dari intent dan response di domain.yml
+
+---
 
 ### ⚙️ Struktur Direktori
 ```bash
@@ -115,6 +123,8 @@ Chatbot/
 └── README.md
 ```
 
+---
+
 ### 🚧 Troubleshooting
 
 |             Masalah               |                       Solusi                           |
@@ -124,11 +134,14 @@ Chatbot/
 | Error `403` atau `CORS`           | Pastikan Rasa dijalankan dengan opsi `--cors "*"`      |
 | Tidak terkoneksi ke WhatsApp      | Logout dari semua device WhatsApp Web dan coba lagi    |
 
+---
+
 ### 📚 Dokumentasi
 - [Rasa Chatbot](https://rasa.com/docs/rasa/)
 <!-- - [WhatsApp Web API](https://developers.facebook.com/docs/whatsapp/api/) -->
 - [OpenWA Node.js](https://docs.openwa.dev/)
 
+---
 
 ### 📜 Lisensi
 <p align="center">MIT License ©2025 @katibin01</p>
