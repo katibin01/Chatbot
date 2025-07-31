@@ -133,5 +133,5 @@ Lihat dokumentasi lainnya.
 
 ---
 
-## 📜 Lisensi
-<p align="center">MIT License ©2025 @katibin01</p>
+## 📜 By
+<p align="center">Powered by: katibin01</p>
