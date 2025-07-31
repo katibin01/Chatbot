@@ -5,7 +5,7 @@
 <h1 align="center">Chatbot AI</h1>
 
 <p align="center">
-  🤖 Powerful and Secure WhatsApp Chatbot powered by <strong>Rasa AI</strong> and <strong>OpenWA Node.js</strong> for seamless and scalable automation.
+  🤖 Powerful and Secure WhatsApp Chatbot powered by <strong>Rasa AI</strong> and <strong>OpenWA Node.js</strong> for seamless and scalable automate.
 </p>
 
 <p align="center">
