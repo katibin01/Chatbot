@@ -125,6 +125,8 @@ Chatbot/
 | Tidak terkoneksi ke WhatsApp      | Logout dari semua device WhatsApp Web dan coba lagi    |
 
 ## 📚 Dokumentasi
+Lihat dokumentasi lainnya.
+
 - [Rasa Chatbot](https://rasa.com/docs/rasa/)
 <!-- - [WhatsApp Web API](https://developers.facebook.com/docs/whatsapp/api/) -->
 - [OpenWA Node.js](https://docs.openwa.dev/)
