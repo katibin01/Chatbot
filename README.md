@@ -116,14 +116,13 @@ Chatbot/
 ```
 
 ### 🚧 Troubleshooting
-```bash
+
 | Masalah                      | Solusi                                              |
 | ---------------------------- | --------------------------------------------------- |
 | QR Code tidak muncul         | Pastikan koneksi internet stabil dan tidak diblokir |
 | Tidak ada respons dari bot   | Cek apakah server Rasa sedang berjalan              |
 | Error `403` atau `CORS`      | Pastikan Rasa dijalankan dengan opsi `--cors "*"`   |
 | Tidak terkoneksi ke WhatsApp | Logout dari semua device WhatsApp Web dan coba lagi |
-```
 
 ### 📚 Dokumentasi
 - [Rasa Documentation](https://rasa.com/docs/)
