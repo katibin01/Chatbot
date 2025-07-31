@@ -2,7 +2,7 @@
   <img src="https://raw.githubusercontent.com/katibin01/Chatbot/main/assets/logo.png" width="400" height="400" alt="Chatbot WhatsApp AI Logo" />
 </p>
 
-<h1 align="center">Chatbot WhatsApp AI</h1>
+<h1 align="center">Chatbot AI</h1>
 
 <p align="center">
   🤖 Powerful and Secure WhatsApp Chatbot powered by <strong>Rasa AI</strong>, <strong>Node.js</strong>, and <strong>OpenWA</strong> for seamless and scalable automation.
@@ -62,3 +62,74 @@ cd Chatbot
 npm install
 cp .env.example .env
 # Edit konfigurasi .env sesuai kebutuhan
+```
+
+---
+
+## ▶️ Menjalankan Aplikasi
+
+### 🔌 Jalankan Server Rasa
+- Pastikan Rasa sudah aktif:
+```bash
+rasa run --enable-api --cors "*" --debug
+```
+Opsional (untuk interaktif chat via shell):
+```bash
+rasa shell
+```
+
+### 📱 Jalankan Chatbot WhatsApp
+- Pastikan WhatsApp account aktif dan terhubung ke WhatsApp Web:
+```bash
+npm start
+```
+- Chatbot akan otomatis terhubung ke WhatsApp Web dan siap menerima pesan.
+
+### 🧪 Testing Fitur
+- Gunakan `rasa shell` untuk menguji fitur chatbot secara interaktif.
+- Gunakan `curl` atau `Postman` untuk menguji endpoint API chatbot.
+
+### 💬 Tes Respon dari WhatsApp
+1. Jalankan npm start
+2. Scan QR Code WhatsApp
+3. Kirim pesan seperti hi, halo, siapa kamu, dll
+4. Bot akan menjawab dari intent dan response di domain.yml
+
+### ⚙️ Struktur Direktori
+```bash
+Chatbot/
+├── assets/
+│   └── logo.png
+├── rasa/
+│   ├── domain.yml
+│   ├── data/
+│   ├── config.yml
+│   └── models/
+├── src/
+│   ├── routes/
+│   ├── services/
+│   └── utils/
+├── .env
+├── app.js
+├── package.json
+└── README.md
+```
+
+### 🚧 Troubleshooting
+```bash
+| Masalah                      | Solusi                                              |
+| ---------------------------- | --------------------------------------------------- |
+| QR Code tidak muncul         | Pastikan koneksi internet stabil dan tidak diblokir |
+| Tidak ada respons dari bot   | Cek apakah server Rasa sedang berjalan              |
+| Error `403` atau `CORS`      | Pastikan Rasa dijalankan dengan opsi `--cors "*"`   |
+| Tidak terkoneksi ke WhatsApp | Logout dari semua device WhatsApp Web dan coba lagi |
+```
+
+### 📚 Dokumentasi
+- [Rasa Documentation](https://rasa.com/docs/)
+<!-- - [WhatsApp Web API Documentation](https://developers.facebook.com/docs/whatsapp/api/) -->
+- [Node.js Documentation](https://nodejs.org/en/docs/)
+
+
+### 📜 Lisensi
+<p align="center">MIT License ©2025 @katibin01</p>
