@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="https://raw.githubusercontent.com/your-org/your-repo/main/assets/logo.png" width="200" alt="Chatbot WhatsApp AI Logo" />
+  <img src="https://raw.githubusercontent.com/katibin01/Chatbot/main/assets/logo.png" width="200" alt="Chatbot WhatsApp AI Logo" />
 </p>
 
 <h1 align="center">Chatbot WhatsApp AI</h1>
@@ -9,9 +9,9 @@
 </p>
 
 <p align="center">
-  <a href="https://github.com/your-org/your-repo/actions"><img alt="Build Status" src="https://img.shields.io/github/actions/workflow/status/your-org/your-repo/main.yml"></a>
-  <a href="https://github.com/your-org/your-repo/issues"><img alt="Issues" src="https://img.shields.io/github/issues/your-org/your-repo"></a>
-  <a href="LICENSE"><img alt="License: MIT" src="https://img.shields.io/github/license/your-org/your-repo"></a>
+  <a href="https://github.com/katibin01/Chatbot/actions"><img alt="Build Status" src="https://img.shields.io/github/actions/workflow/status/katibin01/Chatbot/main.yml"></a>
+  <a href="https://github.com/katibin01/Chatbot/issues"><img alt="Issues" src="https://img.shields.io/github/issues/katibin01/Chatbot"></a>
+  <a href="LICENSE"><img alt="License: MIT" src="https://img.shields.io/github/license/katibin01/Chatbot"></a>
   <a href="#"><img alt="Node.js" src="https://img.shields.io/badge/Node.js-18.x-green?logo=node.js"></a>
   <a href="#"><img alt="Rasa" src="https://img.shields.io/badge/Rasa-3.x-blue?logo=rasa"></a>
 </p>
@@ -57,8 +57,8 @@
 
 ### ⚙️ Setup Langkah Demi Langkah
 ```bash
-git clone https://github.com/your-org/your-repo.git
-cd your-repo
+git clone https://github.com/katibin01/Chatbot.git
+cd Chatbot
 npm install
 cp .env.example .env
 # Edit konfigurasi .env sesuai kebutuhan
