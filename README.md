@@ -9,11 +9,30 @@
 </p>
 
 <p align="center">
-  <a href="https://github.com/katibin01/Chatbot/actions"><img alt="Build Status" src="https://img.shields.io/github/actions/workflow/status/katibin01/Chatbot/main.yml"></a>
-  <a href="https://github.com/katibin01/Chatbot/issues"><img alt="Issues" src="https://img.shields.io/github/issues/katibin01/Chatbot"></a>
-  <a href="LICENSE"><img alt="License: MIT" src="https://img.shields.io/github/license/katibin01/Chatbot"></a>
-  <a href="#"><img alt="Node.js" src="https://img.shields.io/badge/Node.js-18.x-green?logo=node.js"></a>
-  <a href="#"><img alt="Rasa" src="https://img.shields.io/badge/Rasa-3.x-blue?logo=rasa"></a>
+  <!-- Build Status -->
+  <a href="https://github.com/katibin01/Chatbot/actions">
+    <img alt="Build Status" src="https://img.shields.io/github/actions/workflow/status/katibin01/Chatbot/main.yml?branch=main">
+  </a>
+
+  <!-- Issues -->
+  <a href="https://github.com/katibin01/Chatbot/issues">
+    <img alt="GitHub issues" src="https://img.shields.io/github/issues/katibin01/Chatbot">
+  </a>
+
+  <!-- License -->
+  <a href="https://github.com/katibin01/Chatbot/blob/main/LICENSE">
+    <img alt="License: MIT" src="https://img.shields.io/github/license/katibin01/Chatbot">
+  </a>
+
+  <!-- Node.js -->
+  <a href="https://nodejs.org/">
+    <img alt="Node.js" src="https://img.shields.io/badge/Node.js-18.x-green?logo=node.js">
+  </a>
+
+  <!-- Rasa -->
+  <a href="https://rasa.com/">
+    <img alt="Rasa" src="https://img.shields.io/badge/Rasa-3.x-blue?logo=rasa">
+  </a>
 </p>
 
 ---
