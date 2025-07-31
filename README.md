@@ -68,7 +68,7 @@ cp .env.example .env
 
 ## ▶️ Menjalankan Aplikasi
 
-### 🔌 Jalankan Server Rasa
+## 🔌 Jalankan Server Rasa
 - Pastikan Rasa sudah aktif:
 ```bash
 rasa run --enable-api --cors "*" --debug
@@ -78,9 +78,7 @@ Opsional (untuk interaktif chat via shell):
 rasa shell
 ```
 
----
-
-### 📱 Jalankan Chatbot WhatsApp
+## 📱 Jalankan Chatbot WhatsApp
 - Pastikan WhatsApp account aktif dan terhubung ke WhatsApp Web:
 ```bash
 npm start
@@ -89,13 +87,13 @@ npm start
 
 ---
 
-### 🧪 Testing Fitur
+## 🧪 Testing Fitur
 - Gunakan `rasa shell` untuk menguji fitur chatbot secara interaktif.
 - Gunakan `curl` atau `Postman` untuk menguji endpoint API chatbot.
 
 ---
 
-### 💬 Tes Respon dari WhatsApp
+## 💬 Tes Respon dari WhatsApp
 1. Jalankan npm start
 2. Scan QR Code WhatsApp
 3. Kirim pesan seperti hi, halo, siapa kamu, dll
@@ -103,7 +101,7 @@ npm start
 
 ---
 
-### ⚙️ Struktur Direktori
+## ⚙️ Struktur Direktori
 ```bash
 Chatbot/
 ├── assets/
@@ -125,7 +123,7 @@ Chatbot/
 
 ---
 
-### 🚧 Troubleshooting
+## 🚧 Troubleshooting
 
 |             Masalah               |                       Solusi                           |
 | --------------------------------- | ------------------------------------------------------ |
@@ -136,7 +134,7 @@ Chatbot/
 
 ---
 
-### 📚 Dokumentasi
+## 📚 Dokumentasi
 - [Rasa Chatbot](https://rasa.com/docs/rasa/)
 <!-- - [WhatsApp Web API](https://developers.facebook.com/docs/whatsapp/api/) -->
 - [OpenWA Node.js](https://docs.openwa.dev/)
