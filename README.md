@@ -61,8 +61,9 @@ git clone https://github.com/katibin01/Chatbot.git
 cd Chatbot
 npm install
 cp .env.example .env
-# Edit konfigurasi .env sesuai kebutuhan
 ```
+
+Edit konfigurasi .env sesuai kebutuhan
 
 ---
 
@@ -73,7 +74,7 @@ cp .env.example .env
 ```bash
 rasa run --enable-api --cors "*" --debug
 ```
-Opsional (untuk interaktif chat via shell):
+Opsional (untuk interaktif chat via `shell`):
 ```bash
 rasa shell
 ```
@@ -90,10 +91,10 @@ npm start
 - Gunakan `curl` atau `Postman` untuk menguji endpoint API chatbot.
 
 ## 💬 Tes Respon dari WhatsApp
-1. Jalankan npm start
+1. Jalankan `npm start`
 2. Scan QR Code WhatsApp
-3. Kirim pesan seperti hi, halo, siapa kamu, dll
-4. Bot akan menjawab dari intent dan response di domain.yml
+3. Kirim pesan via WhatsApp seperti hi, halo, siapa kamu, dll
+4. Bot akan menjawab dari intent dan response di `domain.yml`
 
 ## ⚙️ Struktur Direktori
 ```bash
