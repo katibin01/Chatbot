@@ -24,7 +24,7 @@
 - 🤖 **Integrasi Rasa AI** — Koneksi dengan server Rasa untuk respon cerdas.
 - 🧠 **Manajemen Session** — Session yang konsisten dan scalable.
 - ⚙️ **Auto Retry & Rate Limit** — Perlindungan dari spam dan error retry otomatis.
-- ✍️ **Simulasi Mengetik** — Memberi kesan respon manusiawi.
+- ✍️ **Simulasi Mengetik** — Memberi kesan respon dengan NLP.
 
 ### 🔸 Advanced Features
 - 📈 **Analytics & Monitoring** — Pelacakan performa & penggunaan bot.
