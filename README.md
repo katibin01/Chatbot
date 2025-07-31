@@ -5,7 +5,7 @@
 <h1 align="center">Chatbot AI</h1>
 
 <p align="center">
-  🤖 Powerful and Secure WhatsApp Chatbot powered by <strong>Rasa AI</strong>, <strong>Node.js</strong>, and <strong>OpenWA</strong> for seamless and scalable automation.
+  🤖 Powerful and Secure WhatsApp Chatbot powered by <strong>Rasa AI</strong> and <strong>OpenWA Node.js</strong> for seamless and scalable automation.
 </p>
 
 <p align="center">
@@ -24,7 +24,7 @@
 - 🤖 **Integrasi Rasa AI** — Koneksi dengan server Rasa untuk respon cerdas.
 - 🧠 **Manajemen Session** — Session yang konsisten dan scalable.
 - ⚙️ **Auto Retry & Rate Limit** — Perlindungan dari spam dan error retry otomatis.
-- ✍️ **Simulasi Mengetik** — Memberi kesan respon dengan NLP.
+- ✍️ **Simulasi Mengetik** — Memberi kesan respon dengan `NLP`.
 
 ### 🔸 Advanced Features
 - 📈 **Analytics & Monitoring** — Pelacakan performa & penggunaan bot.
@@ -38,7 +38,7 @@
 
 | Teknologi | Fungsi |
 |----------|--------|
-| 🧠 **Rasa** | Natural Language Understanding & response AI |
+| 🧠 **Rasa** | Natural Language Understanding (`NLU`) & response AI |
 | 💬 **OpenWA** | Library Node.js untuk WhatsApp Web automation |
 | 🌐 **Express.js** | Web server & endpoint health check |
 | 🗃️ **File-based / Redis** | Manajemen session & statistik |
@@ -50,10 +50,10 @@
 ## 📦 Instalasi
 
 ### 📋 Requirements
-- Node.js v18+ (rekomendasi v20.x)
-- Rasa Server (default port: `5005`)
-- WhatsApp account aktif
-- Google Chrome atau Chromium
+- `Node.js v18+` (rekomendasi v20.x)
+- `Rasa` Server (default port: `5005`)
+- `WhatsApp` account aktif
+- `Google Chrome` atau `Chromium`
 
 ### ⚙️ Setup Langkah Demi Langkah
 ```bash
