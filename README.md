@@ -117,7 +117,7 @@ Chatbot/
 
 ### 🚧 Troubleshooting
 
-| Masalah                           | Solusi                                                 |
+|             Masalah               |                       Solusi                           |
 | --------------------------------- | ------------------------------------------------------ |
 | QR Code tidak muncul              | Pastikan koneksi internet stabil dan tidak diblokir    |
 | Tidak ada respons dari bot        | Cek apakah server Rasa sedang berjalan                 |
