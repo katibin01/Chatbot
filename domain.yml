@@ -110,6 +110,21 @@ entities:
 - kode_f521
 - kode_f522
 slots:
+  status:
+    type: text
+    # values:
+    # - Bekerja
+    # - Melanjutkan Pendidikan
+    # - Wirausaha
+    # - Belum Bekerja
+    # - Tidak bekerja tapi sedang mencari pekerjaan
+    # - Lainnya
+    influence_conversation: true
+    mappings:
+    - type: from_entity
+      entity: status
+    - type: from_text
+      intent: kode_f8
   nama_lengkap:
     type: text
     mappings:
@@ -175,26 +190,6 @@ slots:
     mappings:
     - type: from_entity
       entity: alamat
-  status:
-    type: categorical
-    values:
-    - Bekerja
-    - Melanjutkan Pendidikan
-    - Wirausaha
-    - Belum Bekerja
-    - Tidak bekerja tapi sedang mencari pekerjaan
-    - Lainnya
-    influence_conversation: true
-    mappings:
-    - type: from_entity
-      entity: status
-    - type: from_text
-      intent: kode_f8
-  # kode_f8:
-  #   type: text
-  #   mappings:
-  #   - type: from_entity
-  #     entity: kode_f8
   kode_f502:
     type: text
     mappings:
@@ -362,6 +357,8 @@ responses:
       Halo! Saya asisten virtual yang siap membantu Anda.
       Apa yang bisa saya lakukan untuk Anda?
       Saya dapat membantu Anda dengan informasi, jawaban pertanyaan, atau bahkan sebagai teman mengobrol
+  utter_confirm_greet:
+    - text: "Apakah Anda ingin melanjutkan pengisian form?"
   utter_cheer_up:
   - text: 'Mungkin gambar ini bisa menyemangati kamu:'
     image: https://i.imgur.com/nGF1K8f.jpg
@@ -443,9 +440,9 @@ responses:
   - text: |
       Terima kasih atas masukannya!
       Kami akan terus berupaya meningkatkan layanan.
-  utter_confirm_greet:
-  - text: |
-      Baik, terima kasih atas responnya bisakah anda menyebutkan nama lengkap Anda."
+  # utter_confirm_greet:
+  # - text: |
+  #     Baik, terima kasih atas responnya bisakah anda menyebutkan nama lengkap Anda."
   utter_identifikasi_nim_mahasiswa:
   - text: Terima kasih  bisakah kamu menyebutkan Nomor Induk Mahasiswa (NIM) Anda?
   utter_identifikasi_fakultas_mahasiswa:
@@ -471,16 +468,29 @@ responses:
   utter_identifikasi_alamat:
   - text: Dimana alamat tempat tinggal anda
   utter_kuesioner_f8:
-  - text: |
-      Terima kasih *{nama_lengkap}*, data kamu telah terverifikasi. mari kita lanjut
+  - text: "Terima kasih *{nama_lengkap}*, data kamu telah terverifikasi. mari kita lanjut
       Jelaskan status Anda saat ini.
-      *Pilih salah satu yang paling sesuai dengan status Anda sekarang.*
-      Bekerja
-      Melanjutkan Pendidikan
-      wirausaha
-      Belum Bekerja
-      Tidak bekerja tapi sedang mencari pekerjaan
-      Lainnya
+      *Pilih salah satu yang paling sesuai dengan status Anda sekarang.*"
+    buttons:
+      - title: Bekerja
+        payload: '/status{"status": "Bekerja"}'
+      - title: Melanjutkan Pendidikan
+        payload: '/status{"status": "Melanjutkan Pendidikan"}'
+      - title: Wirausaha
+        payload: '/status{"status": "Wirausaha"}'
+      - title: Belum Bekerja
+        payload: '/status{"status": "Belum Bekerja"}'
+      - title: Tidak bekerja tapi sedang mencari pekerjaan
+        payload: '/status{"status": "Tidak bekerja tapi sedang mencari pekerjaan"}'
+      - title: Lainnya
+        payload: '/status{"status": "Lainnya"}'
+
+      # Bekerja
+      # Melanjutkan Pendidikan
+      # wirausaha
+      # Belum Bekerja
+      # Tidak bekerja tapi sedang mencari pekerjaan
+      # Lainnya
   utter_kuesioner_f502:
   - text: |
       Jika anda memilih bekerja.

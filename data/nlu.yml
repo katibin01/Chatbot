@@ -245,7 +245,8 @@ nlu:
     - nomor induk [521012025](nim_mahasiswa)
 - intent: fakultas_mahasiswa
   examples: |
-    - nama [Fakultas FMIPA](fakultas_mahasiswa)
+    - [Fakultas FMIPA](fakultas_mahasiswa)
+    - [Fakultas MIPA](fakultas_mahasiswa)
     - saya dari [Fakultas MIPA](fakultas_mahasiswa)
     - saya berasal dari [Fakultas FISIP](fakultas_mahasiswa)
     - dari [Fakultas matematika dan ilmu pengetahuan alam](fakultas_mahasiswa)
@@ -256,7 +257,7 @@ nlu:
     - mahasiswa [Fakultas FKIP](fakultas_mahasiswa)
     - saya mahasiswa [Fakultas FKIP](fakultas_mahasiswa)
     - fakulta [Fakultas keguruan dan ilmu pendidikan](fakultas_mahasiswa)
-    - say [Fakultas fkip](fakultas_mahasiswa)
+    - saya [Fakultas fkip](fakultas_mahasiswa)
     - saya berasal dari [Fakultas kesehatan masyarakat](fakultas_mahasiswa)
     - [Fakultas ilmu pendidikan](fakultas_mahasiswa)
     - saya mahasiswa [Fakultas kesmas](fakultas_mahasiswa)
