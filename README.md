@@ -149,4 +149,4 @@ Lihat dokumentasi lainnya.
 ---
 
 ## 📜 Lisensi
-<p align="center">ISC License ©2025. by: katibin</p>
+<p align="center">ISC License ©2025. by: [Katibin](https://github.com/katibin01)</p>
