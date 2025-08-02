@@ -42,7 +42,7 @@
 | 💬 **OpenWA** | Library Node.js untuk WhatsApp Web automation |
 | 🌐 **Express.js** | Web server & endpoint health check |
 | 🗃️ **File-based / Redis** | Manajemen session & statistik |
-| **Database** | PostgreSQL, Radis, Apache, MySQL |
+| 🛢️ **Database** | PostgreSQL, Radis, Apache, MySQL |
 | 📦 **PM2 / Docker** | Deployment dan monitoring |
 | 📝 **Puppeteer / Chromium** | Engine WhatsApp Web otomatis |
 
