@@ -38,13 +38,13 @@
 
 | Teknologi | Fungsi |
 |----------|--------|
-| 🧠 `**Rasa**` | Natural Language Understanding (`NLU`) & response AI |
-| 💬 `**OpenWA**` | Library Node.js untuk WhatsApp Web automation |
-| 🌐 `**Express.js**` | Web server & endpoint health check |
-| 🗃️ `**File-based` / `Redis**` | Manajemen session & statistik |
-| 🛢️ `**Database**` | `PostgreSQL`, `Radis`, `Apache`, `MySQL` |
-| 📦 `**PM2` / `Docker**` | Deployment dan monitoring |
-| 📝 `**Puppeteer` / `Chromium**` | Engine WhatsApp Web otomatis |
+| 🧠 **`Rasa`** | Natural Language Understanding (`NLU`) & response AI |
+| 💬 **`OpenWA`** | Library Node.js untuk WhatsApp Web automation |
+| 🌐 **`Express.js`** | Web server & endpoint health check |
+| 🗃️ **`File-based` / `Redis`** | Manajemen session & statistik |
+| 🛢️ **`Database`** | `PostgreSQL`, `Radis`, `Apache`, `MySQL` |
+| 📦 **`PM2` / `Docker`** | Deployment dan monitoring |
+| 📝 **`Puppeteer` / `Chromium`** | Engine WhatsApp Web otomatis |
 
 ---
 
@@ -139,7 +139,7 @@ Chatbot/
 | Error `403` atau `CORS`           | Pastikan Rasa dijalankan dengan opsi `--cors "*"`      |
 | Tidak terkoneksi ke WhatsApp      | Logout dari semua device WhatsApp Web dan coba lagi    |
 
-## 📚 Dokumentasi
+## 📚 Others
 Lihat dokumentasi lainnya.
 
 - [Rasa AI](https://rasa.com/docs/rasa/)
