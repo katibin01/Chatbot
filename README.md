@@ -143,7 +143,7 @@ Chatbot/
 Lihat dokumentasi lainnya.
 
 - [Rasa AI](https://rasa.com/docs/rasa/)
-<!-- - [WhatsApp Web API](https://developers.facebook.com/docs/whatsapp/api/) -->
+
 - [OpenWA Node.js](https://docs.openwa.dev/)
 
 ---
