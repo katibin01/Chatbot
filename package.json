@@ -17,12 +17,16 @@
     "test": "tests"
   },
   "scripts": {
-    "start": "concurrently \"rasa run actions\" \"rasa run --enable-api --cors '*' --debug\" \"node app.js\"",
+    "start": "concurrently -k -n actions,rasa,node -c yellow,cyan,green \"rasa run actions\" \"rasa run --enable-api --cors '*' --debug\" \"node app.js\"",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
   "author": "Katibin",
-  "license": "ISC",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/katibin01/Chatbot.git"
+  },
   "devDependencies": {
     "concurrently": "^9.2.0"
   }

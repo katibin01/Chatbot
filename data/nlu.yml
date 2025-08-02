@@ -626,7 +626,7 @@ nlu:
     - Lain-nya
 - intent: kode_f522
   examples: |
-    - Pekerjaan tidak sesuai keahlian; pekerjaan saya sekarang sudah sesuai dengan pendidikan saya
+    - Pekerjaan saya sekarang sudah sesuai dengan pendidikan saya
     - Saya belum mendapat pekerjaan yang lebih sesuai
     - Dipekerjaan ini saya memperoleh prospek karir yang baik
     - Saya lebih suka bekerja di area pekerjaan yang tidak ada hubungannya dengan pendidikan saya

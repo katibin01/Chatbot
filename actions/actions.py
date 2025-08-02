@@ -1,6 +1,12 @@
 import os
+import ssl
 import requests
 import logging
+import smtplib
+from email import encoders
+from email.mime.multipart import MIMEMultipart
+from email.mime.text import MIMEText
+from email.mime.base import MIMEBase
 from typing import Dict, List, Text, Any
 from rasa_sdk import Action, Tracker
 from rasa_sdk.executor import CollectingDispatcher
@@ -104,6 +110,52 @@ class ActionSaveConversationLog(Action):
         }
         success = LaravelClient.save_log(log)
         logger.info("Saved conversation log: %s", success)
+        return []
+    
+class ActionSendEmail(Action):
+    def name(self) -> Text:
+        return "action_send_email"
+
+    def run(
+        self,
+        dispatcher: CollectingDispatcher,
+        tracker: Tracker,
+        domain: Dict[Text, Any],
+    ) -> List[Dict[Text, Any]]:
+        recipient = tracker.get_slot("email_to_send")
+        file_path = tracker.get_slot("laporan_path")
+        if not recipient or not file_path or not os.path.exists(file_path):
+            dispatcher.utter_message(text="Mohon maaf, terjadi kesalahan saat membuat lampiran.")
+            return []
+
+        sender = os.getenv("SMTP_USER")
+        password = os.getenv("SMTP_PASS")
+
+        msg = MIMEMultipart()
+        msg["Subject"] = "Laporan Tracer Study"
+        msg["From"] = sender
+        msg["To"] = recipient
+        body = (
+            "Terima kasih sudah menyelesaikan kuesioner.\n"
+            "Laporan kamu sudah saya kirimkan melalui email ini."
+        )
+        msg.attach(MIMEText(body, "plain"))
+
+        with open(file_path, "rb") as f:
+            part = MIMEBase("application", "octet-stream")
+            part.set_payload(f.read())
+        encoders.encode_base64(part)
+        part.add_header("Content-Disposition", f"attachment; filename={os.path.basename(file_path)}")
+        msg.attach(part)
+
+        context = ssl.create_default_context()
+        with smtplib.SMTP_SSL("smtp.gmail.com", 465, context=context) as server:
+            server.login(sender, password)
+            server.sendmail(sender, recipient, msg.as_string())
+
+        dispatcher.utter_message(
+            text=f"Akun berkas berhasil dikirim ke {recipient}. Silakan cek inbox/spam ya."
+        )
         return []
 
 class ActionRestartIfNeeded(Action):

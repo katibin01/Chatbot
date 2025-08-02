@@ -36,6 +36,10 @@ action_endpoint:
 # Event broker which all conversation events should be streamed to.
 # https://rasa.com/docs/rasa/event-brokers
 
+event_broker:
+  type: "rest"
+  url: "https://dash-react.test/api/rasa-events"
+
 #event_broker:
 #  url: localhost
 #  username: username

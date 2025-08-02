@@ -106,9 +106,9 @@ stories:
       - intent: alamat
       - action: utter_identifikasi_npwp_mahasiswa
       - intent: npwp
-      - action: utter_kuesioner_f8
-      - intent: kode_f8
-  - story: path 2
+      # - action: utter_kuesioner_f8
+      # - intent: kode_f8
+  - story: Alur Identifikasi Pengguna dengan NPWP dengan Status Bekerja
     steps:
       - intent: npwp
       - action: utter_kuesioner_f8
@@ -119,6 +119,10 @@ stories:
           - status: 'Bekerja'
       - action: utter_kuesioner_f502
       - intent: kode_f502
+        entities:
+          - status: 'Bekerja'
+      - slot_was_set:
+          - status: 'Bekerja'
       - action: utter_kuesioner_f504
       - intent: kode_f504
       - action: utter_kuesioner_f505
@@ -133,6 +137,10 @@ stories:
       - intent: kode_f512
       - action: utter_kuesioner_f513
       - intent: kode_f513
+        entities:
+          - status: 'Bekerja'
+      - slot_was_set:
+          - status: 'Bekerja'
       - action: utter_kuesioner_f514
       - intent: kode_f514
       - action: utter_kuesioner_f515
@@ -178,6 +186,10 @@ stories:
           - status: 'Melanjutkan Pendidikan'
       - action: utter_kuesioner_f510
       - intent: kode_f510
+        entities:
+          - status: 'Melanjutkan Pendidikan'
+      - slot_was_set:
+          - status: 'Melanjutkan Pendidikan'
       - action: utter_kuesioner_f5101
       - intent: kode_f5101
       - action: utter_kuesioner_f5102
@@ -188,7 +200,7 @@ stories:
       - intent: kode_f511
       - action: action_save_education_data
       - action: utter_send_email
-  - story: path 4
+  - story: Alur Wirausaha
     steps:
       - intent: npwp
       - action: utter_kuesioner_f8
@@ -231,22 +243,31 @@ stories:
       - intent: kode_f522
       - action: action_save_business_data
       - action: utter_send_email
-  - story: path 5
+  - story: Alur Bagi yang Belum Bekerja
     steps:
-      - intent: npwp
-      - action: utter_kuesioner_f8
-      - intent: kode_f8
-        entities:
-          - status: 'Belum Bekerja'
-      - slot_was_set:
-          - status: 'Belum Bekerja'
-      - action: utter_kuesioner_f513
-      - intent: kode_f513
-      - action: utter_kuesioner_f514
-      - intent: kode_f514
-      - action: action_save_job_data
-      - action: utter_send_email
-  - story: alur mencari pekerjaan
+    - intent: npwp
+    - action: utter_kuesioner_f8
+    - intent: kode_f8
+      entities:
+        - status: 'Belum Bekerja'
+    - slot_was_set:
+        - status: 'Belum Bekerja'
+    - action: utter_kuesioner_f513
+    - intent: kode_f513
+      entities:
+        - status: 'Belum Bekerja'
+    - slot_was_set:
+        - status: 'Belum Bekerja'
+    - action: utter_kuesioner_f514
+    - intent: kode_f514
+      entities:
+        - status: 'Belum Bekerja'
+    - slot_was_set:
+        - status: 'Belum Bekerja'
+    - action: action_save_job_data
+    - action: utter_send_email
+
+  - story: Alur Bagi sedang mencari pekerjaan
     steps:
       - intent: npwp
       - action: utter_kuesioner_f8
@@ -257,11 +278,19 @@ stories:
           - status: 'Tidak bekerja tapi sedang mencari pekerjaan'
       - action: utter_kuesioner_f513
       - intent: kode_f513
+        entities:
+          - status: 'Tidak bekerja tapi sedang mencari pekerjaan'
+      - slot_was_set:
+          - status: 'Tidak bekerja tapi sedang mencari pekerjaan'
       - action: utter_kuesioner_f514
       - intent: kode_f514
+        entities:
+          - status: 'Tidak bekerja tapi sedang mencari pekerjaan'
+      - slot_was_set:
+          - status: 'Tidak bekerja tapi sedang mencari pekerjaan'
       - action: action_save_unemployment_data
       - action: utter_send_email
-  - story: alur lainnya
+  - story: Alur Untuk lainnya
     steps:
       - intent: npwp
       - action: utter_kuesioner_f8
@@ -272,9 +301,11 @@ stories:
           - status: 'Lainnya'
       - action: utter_kuesioner_f513
       - intent: kode_f513
+        entities:
+          - status: 'Lainnya'
       - action: action_complete_survey
       - action: utter_send_email
-  - story: selesai_survey
+  - story: Confirmasi Pengisian Kuesioner dengan mengirim file laporan ke email
     steps:
       - action: utter_send_email
       - action: action_complete_survey

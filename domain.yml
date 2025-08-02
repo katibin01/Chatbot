@@ -111,14 +111,15 @@ entities:
 - kode_f522
 slots:
   status:
-    type: text
-    # values:
-    # - Bekerja
-    # - Melanjutkan Pendidikan
-    # - Wirausaha
-    # - Belum Bekerja
-    # - Tidak bekerja tapi sedang mencari pekerjaan
-    # - Lainnya
+    type: categorical
+    initial_value: null
+    values:
+    - Bekerja
+    - Melanjutkan Pendidikan
+    - Wirausaha
+    - Belum Bekerja
+    - Tidak bekerja tapi sedang mencari pekerjaan
+    - Lainnya
     influence_conversation: true
     mappings:
     - type: from_entity
