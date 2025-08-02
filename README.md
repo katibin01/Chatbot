@@ -70,7 +70,7 @@ Edit konfigurasi .env sesuai kebutuhan
 ## ▶️ Menjalankan Aplikasi
 
 ## 🤖 Menjalankan Rasa
-Buat Model Trainning:
+- Buat Model Trainning:
 ```bash
 rasa train
 ```
