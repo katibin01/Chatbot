@@ -149,4 +149,4 @@ Lihat dokumentasi lainnya.
 ---
 
 ## 📜 Lisensi
-<p align="center">ISC License ©2025. by: <a href="https://github.com/katibin01">Katibin</a></p>
+<p align="center">MIT License ©2025. by: <a href="https://github.com/katibin01">Katibin</a></p>
