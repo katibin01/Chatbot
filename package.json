@@ -17,10 +17,13 @@
     "test": "tests"
   },
   "scripts": {
-    "start": "rasa run actions && rasa run --enable-api && node app.js",
+    "start": "concurrently \"rasa run actions\" \"rasa run --enable-api --cors '*' --debug\" \"node app.js\"",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
   "author": "Katibin",
-  "license": "ISC"
+  "license": "ISC",
+  "devDependencies": {
+    "concurrently": "^9.2.0"
+  }
 }

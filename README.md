@@ -69,6 +69,12 @@ Edit konfigurasi .env sesuai kebutuhan
 
 ## ▶️ Menjalankan Aplikasi
 
+## 🤖 Menjalankan Rasa
+Buat Model Trainning:
+```bash
+rasa train
+```
+
 ## 📱 Jalankan Chatbot WhatsApp
 - Pastikan WhatsApp account aktif dan terhubung ke WhatsApp Web:
 ```bash
@@ -76,7 +82,20 @@ npm start
 ```
 - Chatbot akan otomatis terhubung ke WhatsApp Web dan siap menerima pesan.
 
-## 🔌 Jalankan Server Rasa
+## 💬 Tes Respon dari WhatsApp
+1. Jalankan `npm start`
+2. Scan QR Code WhatsApp
+3. Kirim pesan via WhatsApp seperti hi, halo, siapa kamu, dll
+4. Bot akan menjawab dari intent dan response di `domain.yml`
+
+---
+
+Menjalankan Aplikasi secara manual
+## 🤖 Manual Running
+- Buatkan Data trainning dengan:
+```bash
+rasa train
+```
 - Pastikan Rasa sudah aktif:
 ```bash
 rasa run --enable-api --cors "*" --debug
@@ -89,12 +108,6 @@ rasa shell
 ## 🧪 Testing Fitur
 - Gunakan `rasa shell` untuk menguji fitur chatbot secara interaktif.
 - Gunakan `curl` atau `Postman` untuk menguji endpoint API chatbot.
-
-## 💬 Tes Respon dari WhatsApp
-1. Jalankan `npm start`
-2. Scan QR Code WhatsApp
-3. Kirim pesan via WhatsApp seperti hi, halo, siapa kamu, dll
-4. Bot akan menjawab dari intent dan response di `domain.yml`
 
 ## ⚙️ Struktur Direktori
 ```bash

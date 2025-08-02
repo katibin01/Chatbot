@@ -357,8 +357,8 @@ responses:
       Halo! Saya asisten virtual yang siap membantu Anda.
       Apa yang bisa saya lakukan untuk Anda?
       Saya dapat membantu Anda dengan informasi, jawaban pertanyaan, atau bahkan sebagai teman mengobrol
-  utter_confirm_greet:
-    - text: "Apakah Anda ingin melanjutkan pengisian form?"
+  # utter_confirm_greet:
+  #   - text: "Apakah Anda ingin melanjutkan pengisian form?"
   utter_cheer_up:
   - text: 'Mungkin gambar ini bisa menyemangati kamu:'
     image: https://i.imgur.com/nGF1K8f.jpg
@@ -440,9 +440,9 @@ responses:
   - text: |
       Terima kasih atas masukannya!
       Kami akan terus berupaya meningkatkan layanan.
-  # utter_confirm_greet:
-  # - text: |
-  #     Baik, terima kasih atas responnya bisakah anda menyebutkan nama lengkap Anda."
+  utter_confirm_greet:
+  - text: |
+      Baik, terima kasih atas responnya bisakah anda menyebutkan nama lengkap Anda."
   utter_identifikasi_nim_mahasiswa:
   - text: Terima kasih  bisakah kamu menyebutkan Nomor Induk Mahasiswa (NIM) Anda?
   utter_identifikasi_fakultas_mahasiswa:
