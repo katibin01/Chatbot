@@ -96,7 +96,7 @@ Menjalankan Aplikasi secara manual
 ```bash
 rasa train
 ```
-- Pastikan Rasa sudah aktif:
+- Pastikan Rasa API sudah aktif:
 ```bash
 rasa run --enable-api --cors "*" --debug
 ```
