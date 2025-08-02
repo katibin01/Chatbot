@@ -17,9 +17,10 @@
     "test": "tests"
   },
   "scripts": {
+    "start": "rasa run actions && rasa run --enable-api && node app.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
-  "author": "",
+  "author": "Katibin",
   "license": "ISC"
 }

@@ -69,6 +69,13 @@ Edit konfigurasi .env sesuai kebutuhan
 
 ## ▶️ Menjalankan Aplikasi
 
+## 📱 Jalankan Chatbot WhatsApp
+- Pastikan WhatsApp account aktif dan terhubung ke WhatsApp Web:
+```bash
+npm start
+```
+- Chatbot akan otomatis terhubung ke WhatsApp Web dan siap menerima pesan.
+
 ## 🔌 Jalankan Server Rasa
 - Pastikan Rasa sudah aktif:
 ```bash
@@ -78,13 +85,6 @@ Opsional (untuk interaktif chat via `shell`):
 ```bash
 rasa shell
 ```
-
-## 📱 Jalankan Chatbot WhatsApp
-- Pastikan WhatsApp account aktif dan terhubung ke WhatsApp Web:
-```bash
-npm start
-```
-- Chatbot akan otomatis terhubung ke WhatsApp Web dan siap menerima pesan.
 
 ## 🧪 Testing Fitur
 - Gunakan `rasa shell` untuk menguji fitur chatbot secara interaktif.
@@ -135,4 +135,4 @@ Lihat dokumentasi lainnya.
 ---
 
 ## 📜 Lisensi
-<p align="center">MIT License ©2025. by: katibin01</p>
+<p align="center">ISC License ©2025. by: katibin</p>
