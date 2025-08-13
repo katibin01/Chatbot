@@ -1,5 +1,6 @@
 version: '3.1'
 intents:
+- inform
 - affirm
 - alamat
 - ask_cheer_up
@@ -358,7 +359,12 @@ responses:
       Halo! Saya asisten virtual yang siap membantu Anda.
       Apa yang bisa saya lakukan untuk Anda?
       Saya dapat membantu Anda dengan informasi, jawaban pertanyaan, atau bahkan sebagai teman mengobrol
-  # utter_confirm_greet:
+      *Bisakah anda menyebutkan nama lengkap Anda.*
+  - text: |
+      Halo! Saya AI Virtual yang dikembangkan untuk memberikan kemudahan *Tracer Studi*.
+      Saya dapat membantu Anda dengan mengelola informasi atau tanya jawab.
+      *Bisakah anda menyebutkan nama lengkap Anda.*
+  # utter_confirm_after_greet:
   #   - text: "Apakah Anda ingin melanjutkan pengisian form?"
   utter_cheer_up:
   - text: 'Mungkin gambar ini bisa menyemangati kamu:'
@@ -441,11 +447,14 @@ responses:
   - text: |
       Terima kasih atas masukannya!
       Kami akan terus berupaya meningkatkan layanan.
+  # utter_check_name:
   utter_confirm_greet:
   - text: |
-      Baik, terima kasih atas responnya bisakah anda menyebutkan nama lengkap Anda."
+      Bisakah anda menyebutkan nama lengkap Anda.
   utter_identifikasi_nim_mahasiswa:
-  - text: Terima kasih  bisakah kamu menyebutkan Nomor Induk Mahasiswa (NIM) Anda?
+  - text: |
+      Bisakah kamu menyebutkan Nomor Induk Mahasiswa (NIM) Anda?
+      *Contoh Inputan: NIM saya 521012000 atau NIM 521012000*
   utter_identifikasi_fakultas_mahasiswa:
   - text: Apa nama fakultas Anda?
   utter_identifikasi_prodi_mahasiswa:
@@ -453,17 +462,27 @@ responses:
   utter_identifikasi_kode_PT_universitas:
   - text: Sebutkan Kode PT Universitas Anda?
   utter_identifikasi_tahun_masuk:
-  - text: Tahun berapa Anda masuk?
+  - text: |
+      Tahun berapa Anda masuk?
+      *Contoh Inputan: tahun masuk 2020*
   utter_identifikasi_tahun_lulus:
-  - text: dan Anda Lulus tahun berapa?
+  - text: |
+      dan Anda Lulus tahun berapa?
+      *Contoh Inputan: tahun lulus 2020*
   utter_identifikasi_kode_prodi:
-  - text: Berapa Nomor Kode Prodi kampus Anda?
+  - text: |
+      Berapa Nomor Kode Prodi kampus Anda?
+      *Contoh Inputan: Kode 11221234*
   utter_identifikasi_email_mahasiswa:
   - text: Sebutkan alamat email aktif Anda
   utter_identifikasi_nomor_telepon:
-  - text: Sebutkan berapa nomor telepon Anda?
+  - text: |
+      Sebutkan berapa nomor telepon Anda?
+      *Contoh Inputan: Nomor Hp 08123456789*
   utter_identifikasi_npwp_mahasiswa:
-  - text: Sebutkan NPWP Anda.
+  - text: |
+      Sebutkan NPWP Anda.
+      Contoh Inputan: NPWP saya 12.34.56.7-89.12.34
   utter_identifikasi_nik_mahasiswa:
   - text: Sebutkan nomor NIK Anda
   utter_identifikasi_alamat:
@@ -495,15 +514,18 @@ responses:
   utter_kuesioner_f502:
   - text: |
       Jika anda memilih bekerja.
-      Dalam berapa bulan anda mendapatkan pekerjaan pertama setelah lulus?  
+      Dalam berapa bulan anda mendapatkan pekerjaan pertama setelah lulus?
+      *Contoh Inputan: 3 bulan* 
   utter_kuesioner_f503:
   - text: |
       Jika anda memilih berwirausaha.
       Dalam berapa bulan setelah lulus anda memulai wirausaha?
+      *Contoh Inputan: 3 bulan*
   utter_kuesioner_f504:
   - text: |-
       Berapa rata-rata pendapatan anda perbulan?
       (take home pay)?
+      *Contoh Inputan: Rp. 3.000.000 juta*
   utter_kuesioner_f505:
   - text: |
       dimana lokasi anda bekerja? 
@@ -553,6 +575,7 @@ responses:
   - text: |
       Jika anda melanjutkan studi,
       kapan anda mulai masuk?
+      *Contoh Inputan: masuk 2020*
   utter_kuesioner_f511:
   - text: |
       Sebutkan sumber dana dalam pembiayaan kuliah Anda
@@ -601,61 +624,63 @@ responses:
   - text: |
       Menurut anda seberapa besar penekanan pada metode pembelajaran berikut ini di program studi anda?
       *Tentang Perkuliahan*
-      note:
+      contoh Inputan:
       input angka 1 - 5
-      1 sangat besar, 2 besar, 3 cukup besar, 4 kecil, 5 sangat kecil
+      *(1 sangat besar, 2 besar, 3 cukup besar, 4 kecil, 5 sangat kecil)*
   utter_kuesioner_f5151:
   - text: |
       Menurut anda seberapa besar penekanan pada metode pembelajaran berikut ini di program studi anda?
       *Tentang Demonstrasi (implementasi)*
-      note:
+      contoh Inputan:
       input angka 1 - 5
-      1 sangat besar, 2 besar, 3 cukup besar, 4 kecil, 5 sangat kecil
+      *(1 sangat besar, 2 besar, 3 cukup besar, 4 kecil, 5 sangat kecil)*
   utter_kuesioner_f5152:
   - text: |
       Menurut anda seberapa besar penekanan pada metode pembelajaran berikut ini di program studi anda?
       *tentang Proyek Riset*
-      note:
+      contoh Inputan:
       input angka 1 - 5
-      1 sangat besar, 2 besar, 3 cukup besar, 4 kecil, 5 sangat kecil
+      *(1 sangat besar, 2 besar, 3 cukup besar, 4 kecil, 5 sangat kecil)*
   utter_kuesioner_f5153:
   - text: |
       Menurut anda seberapa besar penekanan pada metode pembelajaran berikut ini di program studi anda?
       *Tentang Magang*
-      note:
+      contoh Inputan:
       input angka 1 - 5
-      1 sangat besar, 2 besar, 3 cukup besar, 4 kecil, 5 sangat kecil
+      *(1 sangat besar, 2 besar, 3 cukup besar, 4 kecil, 5 sangat kecil)*
   utter_kuesioner_f5154:
   - text: |
       Menurut anda seberapa besar penekanan pada metode pembelajaran berikut ini di program studi anda?
       *Tentang Praktikum*
-      note:
+      contoh Inputan:
       input angka 1 - 5
-      1 sangat besar, 2 besar, 3 cukup besar, 4 kecil, 5 sangat kecil
+      *(1 sangat besar, 2 besar, 3 cukup besar, 4 kecil, 5 sangat kecil)*
   utter_kuesioner_f5155:
   - text: |
       Menurut anda seberapa besar penekanan pada metode pembelajaran berikut ini di program studi anda?
       *Tentang Kerja Lapangan*
-      note:
+      contoh Inputan:
       input angka 1 - 5
-      1 sangat besar, 2 besar, 3 cukup besar, 4 kecil, 5 sangat kecil
+      *(1 sangat besar, 2 besar, 3 cukup besar, 4 kecil, 5 sangat kecil)*
   utter_kuesioner_f5156:
   - text: |
       Menurut anda seberapa besar penekanan pada metode pembelajaran berikut ini di program studi anda?
       *tentang DISKUSI*
-      note:
+      contoh Inputan:
       input angka 1 - 5
-      1 sangat besar, 2 besar, 3 cukup besar, 4 kecil, 5 sangat kecil
+      *(1 sangat besar, 2 besar, 3 cukup besar, 4 kecil, 5 sangat kecil)*
   utter_kuesioner_f516:
   - text: |
       Kapan anda mulai mencari pekerjaan? 
       *Pekerjaan sambilan tidak termasuk.*
       == Bulan sebelum lulus ==
+      *Contoh Inputan: 3 bulan sebelum lulus*
   utter_kuesioner_f5161:
   - text: |
       Kapan anda mulai mencari pekerjaan? 
       *Pekerjaan sambilan tidak termasuk.*
       == Bulan sesudah lulus ==
+      *Contoh Inputan: 3 bulan sesudah lulus*
   utter_kuesioner_f517:
   - text: |
       Bagaimana anda mencari pekerjaan tersebut? 
@@ -675,12 +700,15 @@ responses:
   - text: |
       Berapa perusahaan/instansi/institusi yang sudah anda lamar (lewat surat atau e-mail) 
       sebelum anda memperoleh pekerjaan pertama?
+      *Contoh Inputan: 5 perusahaan*
   utter_kuesioner_f519:
   - text: |
       Berapa banyak perusahaan/instansi/institusi yang merespons lamaran anda?
+      *Contoh Inputan: 3 perusahaan*
   utter_kuesioner_f520:
   - text: |
       Berapa banyak perusahaan/instansi/institusi yang mengundang anda untuk wawancara?
+      *Contoh Inputan: 2 perusahaan*
   utter_kuesioner_f521:
   - text: |
       Apakah anda aktif mencari pekerjaan dalam 4 minggu terakhir? Pilih satu jawaban.
@@ -715,6 +743,14 @@ responses:
       Terima kasih telah mengisi Tracer Study.
       Kami telah mengirimkan file laporan Tracer Study ke email anda. Silahkan cek email anda.
 actions:
+- action_fetch_alumni_data
+- action_check_previous_answers
+- action_store_custom_answer
+- action_save_alumni_data
+- action_save_conversation_log
+- action_send_email
+- action_restart
+
 - action_default_fallback
 - action_send_whatsapp_menu
 - action_send_whatsapp_template

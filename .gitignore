@@ -19,6 +19,7 @@ reports
 /_IGNORE_TRACER_STUDY_BOT
 /_IGNORE_session
 /lib
+/sessions
 CHATBOT_AI.data.json
 docs.txt
 .rasa/cache*

@@ -62,10 +62,10 @@ stories:
     steps:
       - intent: ask_happy
       - action: utter_happy
-  - story: alur2
-    steps:
-      - intent: confirm_help
-      - action: utter_confirm_greet
+  # - story: alur2
+  #   steps:
+  #     - intent: confirm_help
+  #     - action: utter_confirm_greet
   - story: Ketika Menanyakan Informasi Tentang Tracer Study - Identifikasi Pengguna
     steps:
       - intent: info_formulir_tracer

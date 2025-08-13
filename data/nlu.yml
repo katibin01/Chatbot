@@ -33,6 +33,8 @@ nlu:
 - intent: greet
   examples: |
     - hi
+    - tes
+    - test
     - hi bro
     - hai
     - hai bro
@@ -47,9 +49,9 @@ nlu:
     - assalamualaikum warahmatullahi wabarakatuh
     - assalamualaikum
     - waalaikumsalam
-    - woi
-    - woy
-    - hey
+    # - woi
+    # - woy
+    # - hey
 - intent: confirm_help
   examples: |
     - tolong bantu saya
@@ -231,6 +233,8 @@ nlu:
 - intent: nama_lengkap
   examples: |
     - nama saya [Andi Katibin](nama_lengkap)
+    - nama saya [Neti Septi Wijaya](nama_lengkap)
+    - nama [Apriliadi Dimas Montoya](nama_lengkap)
     - nama saya [Muhammad Nur Arafah](nama_lengkap)
     - nama saya [Rachmat Rakes](nama_lengkap)
     - nama saya [Boben Mambela](nama_lengkap)

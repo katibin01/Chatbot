@@ -1,3 +1,15 @@
+# This files contains your custom actions which can be used to run
+# custom Python code.
+#
+# See this guide on how to implement these action:
+# https://rasa.com/docs/rasa/custom-actions
+
+# This files contains your custom actions which can be used to run
+# custom Python code.
+#
+# See this guide on how to implement these action:
+# https://rasa.com/docs/rasa/custom-actions
+
 import os
 import ssl
 import requests
@@ -43,6 +55,17 @@ class LaravelClient:
         except Exception as e:
             logger.error("Save log: %s", e)
             return False
+        
+    @staticmethod
+    def get_previous_answers(nim: str, question: str) -> Dict:
+        try:
+            url = f"{LARAVEL_API_URL}/answers/previous?nim={nim}&question={question}"
+            resp = requests.get(url, headers=LaravelClient._headers(), timeout=10)
+            resp.raise_for_status()
+            return resp.json().get("data", {})
+        except Exception as e:
+            logger.error("Get previous answers: %s", e)
+            return {}
 
 class ActionFetchAlumniData(Action):
     def name(self) -> Text:
@@ -156,6 +179,91 @@ class ActionSendEmail(Action):
         dispatcher.utter_message(
             text=f"Akun berkas berhasil dikirim ke {recipient}. Silakan cek inbox/spam ya."
         )
+        return []
+    
+class ActionStoreCustomAnswer(Action):
+    def name(self) -> Text:
+        return "action_store_custom_answer"
+
+    # def run(self, dispatcher: CollectingDispatcher, tracker: Tracker, domain: Dict) -> List:
+    #     nim = tracker.get_slot("nim_mahasiswa")
+    #     pertanyaan = tracker.get_slot("current_question")
+    #     jawaban = tracker.latest_message.get("text")
+
+    #     # Tangani jika user ingin gunakan jawaban lama
+    #     previous_answer = tracker.get_slot(f"previous_{pertanyaan}")
+    #     if jawaban.lower() == "lewati" and previous_answer:
+    #         jawaban = previous_answer
+    #         dispatcher.utter_message(text=f"Jawaban lama digunakan: {jawaban}")
+    #     else:
+    #         dispatcher.utter_message(text=f"Jawaban disimpan: {jawaban}")
+
+    #     # Simpan ke Laravel
+    #     try:
+    #         save = requests.post(
+    #             f"{LARAVEL_API_URL}/answers",
+    #             headers=LaravelClient._headers(),
+    #             json={
+    #                 "nim": nim,
+    #                 "question": pertanyaan,
+    #                 "answer": jawaban
+    #             },
+    #             timeout=10
+    #         )
+    #         save.raise_for_status()
+    #     except Exception as e:
+    #         logger.error("❌ Gagal menyimpan jawaban: %s", e)
+    #         dispatcher.utter_message(text="⚠️ Gagal menyimpan jawaban ke server.")
+
+    #     # Simpan ke slot
+    #     return [SlotSet(pertanyaan, jawaban)]
+
+    def run(self, dispatcher: CollectingDispatcher,
+            tracker: Tracker,
+            domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
+
+        # Ambil jawaban terakhir dari user
+        last_user_message = tracker.latest_message.get("text")
+
+        # Ambil nilai entitas (jika ada dari button payload)
+        status_pekerjaan = tracker.get_slot("status_pekerjaan")
+
+        # Gunakan entitas jika ada, jika tidak pakai teks input manual
+        jawaban = status_pekerjaan if status_pekerjaan else last_user_message
+
+        # Ambil sender_id sebagai pengenal NIM
+        nim = tracker.sender_id
+
+        # Kirim ke Laravel API
+        try:
+            payload = {
+                "nim": nim,
+                "question": "status_pekerjaan",
+                "answer": jawaban
+            }
+            response = requests.post(f"{LARAVEL_API_URL}/jawaban", json=payload)
+            response.raise_for_status()
+            dispatcher.utter_message(text=f"Terima kasih atas jawabannya: {jawaban}")
+        except Exception as e:
+            dispatcher.utter_message(text="Maaf, gagal menyimpan jawaban.")
+
+        return []
+
+class ActionFallbackCustom(Action):
+    def name(self) -> Text:
+        return "action_fallback_custom"
+
+    def run(self, dispatcher: CollectingDispatcher, tracker: Tracker, domain: Dict) -> List[Dict]:
+        user_message = tracker.latest_message.get('text')
+        user_id = tracker.sender_id
+        
+        # Kirim ke Laravel untuk disimpan
+        requests.post(f"{LARAVEL_API_URL}/store-unhandled", json={
+            "sender_id": user_id,
+            "message": user_message
+        })
+
+        dispatcher.utter_message("Maaf, saya belum memahami pertanyaan Anda. Akan saya teruskan ke admin.")
         return []
 
 class ActionRestartIfNeeded(Action):
